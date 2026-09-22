@@ -3,78 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SSC Study Station - Maths (12 Topics)</title>
+<title>Percentage Puri Playlist - Gagan Sir</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<style>
-.acc-content{max-height:0;overflow:hidden;transition:max-height 0.6s ease}
-.acc-content.open{max-height:6000px}
-.aspect-video{aspect-ratio:16/9}
-</style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-50">
 <div class="max-w-4xl mx-auto p-3">
-<h1 class="text-3xl font-black text-center py-3">📊 SSC Study Station</h1>
-<p class="text-center text-gray-600 mb-4">Topic pe click karo - Pura Playlist YHI dekho (Gagan Pratap Sir)</p>
+<h1 class="text-2xl font-black text-center py-4">📊 Percentage - Puri Playlist 🔥</h1>
+<p class="text-center text-gray-600 mb-4">Gagan Pratap Sir - Sab videos yahi dekho</p>
 
-<!-- 2. PERCENTAGE - FULL PLAYLIST INSIDE -->
-<div class="bg-white rounded-2xl shadow-lg mb-4 border-2 border-yellow-400 overflow-hidden">
-<button onclick="toggleAcc('t2')" class="w-full p-4 flex justify-between items-center bg-yellow-50 font-bold text-lg">2. Percentage - Pura Playlist 🔥 <span id="i-t2">▲</span></button>
-<div id="t2" class="acc-content open p-3">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- MAIN PLAYER -->
+<div class="bg-black rounded-2xl overflow-hidden aspect-video shadow-xl">
+<iframe id="mainPlayer" class="w-full h-full" src="https://www.youtube.com/embed/9MxW667xu6A" allowfullscreen></iframe>
+</div>
+<h2 id="nowPlaying" class="font-bold mt-3 mb-4">▶️ Class 1 - Percentage Basics</h2>
 
-<div class="bg-gray-50 p-2 rounded-xl">
-<p class="font-bold text-sm mb-2">Class 1 - Basics</p>
-<div class="aspect-video rounded-xl overflow-hidden">
-<iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?listType=search&list=Percentage+Class+1+by+Gagan+Pratap+Sir" allowfullscreen></iframe>
-</div>
-</div>
-
-<div class="bg-gray-50 p-2 rounded-xl">
-<p class="font-bold text-sm mb-2">Class 2 - Tricks</p>
-<div class="aspect-video rounded-xl overflow-hidden">
-<iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?listType=search&list=Percentage+Class+2+by+Gagan+Pratap+Sir" allowfullscreen></iframe>
-</div>
+<!-- PLAYLIST -->
+<div class="space-y-3">
+<div onclick="playVideo('9MxW667xu6A','Class 1 - Percentage Basics')" class="bg-white p-3 rounded-xl border-2 border-yellow-400 cursor-pointer flex gap-3">
+<div class="bg-yellow-400 w-12 h-12 rounded-lg flex items-center justify-center font-bold">1</div><div><p class="font-bold text-sm">Class 1 - Percentage Basics (Full Concept)</p><p class="text-xs text-gray-500">Gagan Sir • Yahi chalega</p></div>
 </div>
 
-<div class="bg-gray-50 p-2 rounded-xl">
-<p class="font-bold text-sm mb-2">Class 3 - PYQ + Questions</p>
-<div class="aspect-video rounded-xl overflow-hidden">
-<iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?listType=search&list=Percentage+Class+3+by+Gagan+Pratap+Sir" allowfullscreen></iframe>
-</div>
+<div onclick="playVideo('lurFnwLAesk','Class 2 - Profit Loss me Percentage')" class="bg-white p-3 rounded-xl border-2 border-gray-200 cursor-pointer flex gap-3">
+<div class="bg-black text-white w-12 h-12 rounded-lg flex items-center justify-center">2</div><div><p class="font-bold text-sm">Class 2 - Profit Loss me Percentage Use</p><p class="text-xs text-gray-500">Gagan Sir • Click to Play</p></div>
 </div>
 
-<div class="bg-gray-50 p-2 rounded-xl">
-<p class="font-bold text-sm mb-2">Full Playlist - Auto Play (15+ Videos)</p>
-<div class="aspect-video rounded-xl overflow-hidden">
-<iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?listType=search&list=Percentage+complete+playlist+by+Gagan+Pratap+Sir" allowfullscreen></iframe>
+<div onclick="playVideo('S0qjK3TWZE8','Class 3 - One Shot Railway 2026')" class="bg-white p-3 rounded-xl border-2 border-gray-200 cursor-pointer flex gap-3">
+<div class="bg-black text-white w-12 h-12 rounded-lg flex items-center justify-center">3</div><div><p class="font-bold text-sm">Class 3 - One Shot Railway Exams 2026-27</p><p class="text-xs text-gray-500">Complete One Shot</p></div>
+</div>
+
+<div onclick="playVideo('n1qAb9x6p5Q','Class 4 - PYQ Practice')" class="bg-white p-3 rounded-xl border-2 border-gray-200 cursor-pointer flex gap-3">
+<div class="bg-black text-white w-12 h-12 rounded-lg flex items-center justify-center">4</div><div><p class="font-bold text-sm">Class 4 - 200 PYQ Practice</p><p class="text-xs text-gray-500">SSC CGL / CHSL / MTS</p></div>
 </div>
 </div>
 
 </div>
-<p class="text-center text-xs mt-3 text-gray-500">Sab videos yahi chalenge - Next button se agla video</p>
-</div>
-</div>
 
-<!-- BAKI 11 TOPICS SAME PATTERN -->
-<div class="bg-white rounded-xl shadow mb-3 overflow-hidden"><button onclick="toggleAcc('t1')" class="w-full p-4 flex justify-between font-bold">1. Number System <span id="i-t1">▼</span></button><div id="t1" class="acc-content p-3"><div class="aspect-video rounded-xl overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?listType=search&list=Number+System+by+Gagan+Pratap+Sir" allowfullscreen></iframe></div></div></div>
-<div class="bg-white rounded-xl shadow mb-3 overflow-hidden"><button onclick="toggleAcc('t3')" class="w-full p-4 flex justify-between font-bold">3. Profit & Loss <span id="i-t3">▼</span></button><div id="t3" class="acc-content p-3"><div class="aspect-video rounded-xl overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?listType=search&list=Profit+and+Loss+by+Gagan+Pratap+Sir" allowfullscreen></iframe></div></div></div>
-<div class="bg-white rounded-xl shadow mb-3 overflow-hidden"><button onclick="toggleAcc('t4')" class="w-full p-4 flex justify-between font-bold">4. SI & CI <span id="i-t4">▼</span></button><div id="t4" class="acc-content p-3"><div class="aspect-video rounded-xl overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?listType=search&list=Simple+Compound+Interest+by+Gagan+Pratap+Sir" allowfullscreen></iframe></div></div></div>
-<div class="bg-white rounded-xl shadow mb-3 overflow-hidden"><button onclick="toggleAcc('t5')" class="w-full p-4 flex justify-between font-bold">5. Ratio & Proportion <span id="i-t5">▼</span></button><div id="t5" class="acc-content p-3"><div class="aspect-video rounded-xl overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?listType=search&list=Ratio+Proportion+by+Gagan+Pratap+Sir" allowfullscreen></iframe></div></div></div>
-<div class="bg-white rounded-xl shadow mb-3 overflow-hidden"><button onclick="toggleAcc('t6')" class="w-full p-4 flex justify-between font-bold">6. Time Speed Distance <span id="i-t6">▼</span></button><div id="t6" class="acc-content p-3"><div class="aspect-video rounded-xl overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?listType=search&list=Time+Speed+Distance+by+Gagan+Pratap+Sir" allowfullscreen></iframe></div></div></div>
-<div class="bg-white rounded-xl shadow mb-3 overflow-hidden"><button onclick="toggleAcc('t7')" class="w-full p-4 flex justify-between font-bold">7. Time & Work <span id="i-t7">▼</span></button><div id="t7" class="acc-content p-3"><div class="aspect-video rounded-xl overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?listType=search&list=Time+and+Work+by+Gagan+Pratap+Sir" allowfullscreen></iframe></div></div></div>
-<div class="bg-white rounded-xl shadow mb-3 overflow-hidden"><button onclick="toggleAcc('t8')" class="w-full p-4 flex justify-between font-bold">8. Algebra <span id="i-t8">▼</span></button><div id="t8" class="acc-content p-3"><div class="aspect-video rounded-xl overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?listType=search&list=Algebra+by+Gagan+Pratap+Sir" allowfullscreen></iframe></div></div></div>
-<div class="bg-white rounded-xl shadow mb-3 overflow-hidden"><button onclick="toggleAcc('t9')" class="w-full p-4 flex justify-between font-bold">9. Geometry <span id="i-t9">▼</span></button><div id="t9" class="acc-content p-3"><div class="aspect-video rounded-xl overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?listType=search&list=Geometry+by+Gagan+Pratap+Sir" allowfullscreen></iframe></div></div></div>
-<div class="bg-white rounded-xl shadow mb-3 overflow-hidden"><button onclick="toggleAcc('t10')" class="w-full p-4 flex justify-between font-bold">10. Mensuration <span id="i-t10">▼</span></button><div id="t10" class="acc-content p-3"><div class="aspect-video rounded-xl overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?listType=search&list=Mensuration+by+Gagan+Pratap+Sir" allowfullscreen></iframe></div></div></div>
-<div class="bg-white rounded-xl shadow mb-3 overflow-hidden"><button onclick="toggleAcc('t11')" class="w-full p-4 flex justify-between font-bold">11. Trigonometry <span id="i-t11">▼</span></button><div id="t11" class="acc-content p-3"><div class="aspect-video rounded-xl overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?listType=search&list=Trigonometry+by+Gagan+Pratap+Sir" allowfullscreen></iframe></div></div></div>
-<div class="bg-white rounded-xl shadow mb-3 overflow-hidden"><button onclick="toggleAcc('t12')" class="w-full p-4 flex justify-between font-bold">12. Average & Mixture <span id="i-t12">▼</span></button><div id="t12" class="acc-content p-3"><div class="aspect-video rounded-xl overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/videoseries?listType=search&list=Average+Mixture+by+Gagan+Pratap+Sir" allowfullscreen></iframe></div></div></div>
-
-</div>
 <script>
-function toggleAcc(id){
-const el=document.getElementById(id);
-const ic=document.getElementById('i-'+id);
-el.classList.toggle('open');
-if(ic) ic.textContent=el.classList.contains('open')?'▲':'▼';
+function playVideo(id, title){
+document.getElementById('mainPlayer').src = 'https://www.youtube.com/embed/'+id;
+document.getElementById('nowPlaying').innerText = '▶️ '+title;
+window.scrollTo({top:0, behavior:'smooth'});
 }
 </script>
 </body>
