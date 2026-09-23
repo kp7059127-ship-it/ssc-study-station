@@ -3,47 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Percentage Puri Playlist - Gagan Sir</title>
+<title>Percentage - 18 Classes - SSC Study Station</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50">
 <div class="max-w-4xl mx-auto p-3">
-<h1 class="text-2xl font-black text-center py-4">📊 Percentage - Puri Playlist 🔥</h1>
-<p class="text-center text-gray-600 mb-4">Gagan Pratap Sir - Sab videos yahi dekho</p>
+<h1 class="text-2xl font-black text-center mt-4">📊 Percentage - Puri Playlist 🔥</h1>
+<p class="text-center text-gray-600 mb-4">Gagan Pratap Sir - Sab videos yahi dekho - 18 Classes</p>
 
-<!-- MAIN PLAYER -->
-<div class="bg-black rounded-2xl overflow-hidden aspect-video shadow-xl">
-<iframe id="mainPlayer" class="w-full h-full" src="https://www.youtube.com/embed/9MxW667xu6A" allowfullscreen></iframe>
+<div class="bg-black rounded-2xl overflow-hidden">
+<iframe id="mainPlayer" class="w-full h-[220px] md:h-[450px]" src="https://www.youtube.com/embed/5U0tZwMyY2U" allowfullscreen></iframe>
 </div>
-<h2 id="nowPlaying" class="font-bold mt-3 mb-4">▶️ Class 1 - Percentage Basics</h2>
+<h2 id="nowTitle" class="font-bold mt-3 text-lg">▶ Class 1 - Percentage Basics (Full Concept)</h2>
 
-<!-- PLAYLIST -->
-<div class="space-y-3">
-<div onclick="playVideo('9MxW667xu6A','Class 1 - Percentage Basics')" class="bg-white p-3 rounded-xl border-2 border-yellow-400 cursor-pointer flex gap-3">
-<div class="bg-yellow-400 w-12 h-12 rounded-lg flex items-center justify-center font-bold">1</div><div><p class="font-bold text-sm">Class 1 - Percentage Basics (Full Concept)</p><p class="text-xs text-gray-500">Gagan Sir • Yahi chalega</p></div>
-</div>
-
-<div onclick="playVideo('lurFnwLAesk','Class 2 - Profit Loss me Percentage')" class="bg-white p-3 rounded-xl border-2 border-gray-200 cursor-pointer flex gap-3">
-<div class="bg-black text-white w-12 h-12 rounded-lg flex items-center justify-center">2</div><div><p class="font-bold text-sm">Class 2 - Profit Loss me Percentage Use</p><p class="text-xs text-gray-500">Gagan Sir • Click to Play</p></div>
-</div>
-
-<div onclick="playVideo('S0qjK3TWZE8','Class 3 - One Shot Railway 2026')" class="bg-white p-3 rounded-xl border-2 border-gray-200 cursor-pointer flex gap-3">
-<div class="bg-black text-white w-12 h-12 rounded-lg flex items-center justify-center">3</div><div><p class="font-bold text-sm">Class 3 - One Shot Railway Exams 2026-27</p><p class="text-xs text-gray-500">Complete One Shot</p></div>
-</div>
-
-<div onclick="playVideo('n1qAb9x6p5Q','Class 4 - PYQ Practice')" class="bg-white p-3 rounded-xl border-2 border-gray-200 cursor-pointer flex gap-3">
-<div class="bg-black text-white w-12 h-12 rounded-lg flex items-center justify-center">4</div><div><p class="font-bold text-sm">Class 4 - 200 PYQ Practice</p><p class="text-xs text-gray-500">SSC CGL / CHSL / MTS</p></div>
-</div>
-</div>
-
+<div id="playlist" class="mt-4 space-y-3 pb-10"></div>
 </div>
 
 <script>
-function playVideo(id, title){
-document.getElementById('mainPlayer').src = 'https://www.youtube.com/embed/'+id;
-document.getElementById('nowPlaying').innerText = '▶️ '+title;
-window.scrollTo({top:0, behavior:'smooth'});
+const videos = [
+ {id:"5U0tZwMyY2U", title:"Class 1 - Percentage Basics (Full Concept)"},
+ {id:"hi8XOobfjlo", title:"Class 2 - Profit Loss me Percentage Use"},
+ {id:"6KwqbAsnI_4", title:"Class 3 - One Shot Railway Exams 2026-27"},
+ {id:"mwCX35YQiTg", title:"Class 4 - 200 PYQ Practice"},
+ {id:"a3BI0dYUMHY", title:"Class 5 - Percentage"},
+ {id:"Tst6T-6TtLE", title:"Class 6 - Percentage"},
+ {id:"azJatcgDlHo", title:"Class 7 - Percentage"},
+ {id:"dW5M9kPLw3Q", title:"Class 8 - Percentage"},
+ {id:"ie81CfFWw5Y", title:"Class 9 - Percentage"},
+ {id:"ZopfTaNMlqQ", title:"Class 10 - Percentage"},
+ {id:"tWQQBU3V-Lc", title:"Class 11 - Percentage"},
+ {id:"7Jt9l3l7gHQ", title:"Class 12 - Percentage"},
+ {id:"IM1AwPTjoHk", title:"Class 13 - Percentage"},
+ {id:"gaf4VahI7Uk", title:"Class 14 - Percentage"},
+ {id:"XHhOw8PU_Cw", title:"Class 15 - Percentage"},
+ {id:"E9BmIVVxhig", title:"Class 16 - Percentage"},
+ {id:"A-uVg3fN_Fs", title:"Class 17 - Percentage"},
+ {id:"cDwxYkYM1fw", title:"Class 18 - Percentage Final"}
+];
+
+function loadPlaylist(){
+  document.getElementById('playlist').innerHTML = videos.map((v,i)=>`
+    <div onclick="playVideo(${i})" id="item-${i}" class="p-3 bg-white rounded-xl shadow flex justify-between items-center cursor-pointer border-2 ${i===0?'border-yellow-400':'border-transparent'}">
+      <div class="flex gap-3 items-center">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-white ${i===0?'bg-yellow-400 text-black':'bg-black'}">${i+1}</div>
+        <div>
+          <p class="font-bold text-sm">${v.title}</p>
+          <p class="text-xs text-gray-500">${i===0?'Gagan Sir • Yahi chalega':'Gagan Sir • Click to Play'}</p>
+        </div>
+      </div>
+      <span>▶</span>
+    </div>
+  `).join('');
 }
+
+function playVideo(i){
+  document.getElementById('mainPlayer').src = "https://www.youtube.com/embed/"+videos[i].id+"?autoplay=1";
+  document.getElementById('nowTitle').innerText = "▶ " + videos[i].title;
+  loadPlaylist();
+  // active border change
+  setTimeout(()=>{
+    document.querySelectorAll('[id^=item-]').forEach(el=>{el.classList.remove('border-yellow-400'); el.firstElementChild.firstElementChild.classList.remove('bg-yellow-400','text-black'); el.firstElementChild.firstElementChild.classList.add('bg-black');});
+    const active = document.getElementById('item-'+i);
+    active.classList.add('border-yellow-400');
+    active.firstElementChild.firstElementChild.classList.remove('bg-black');
+    active.firstElementChild.firstElementChild.classList.add('bg-yellow-400','text-black');
+  },10);
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+loadPlaylist();
 </script>
 </body>
 </html>
