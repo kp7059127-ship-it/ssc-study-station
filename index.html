@@ -1,130 +1,143 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SSC Study Station - Percentage + Ratio</title>
+<title>SSC Study Station</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50">
-<div class="max-w-4xl mx-auto p-3">
+<body class="bg-gray-100">
+<div class="max-w-3xl mx-auto p-3">
 
-<!-- ===== PERCENTAGE SECTION ===== -->
-<h1 class="text-2xl font-black text-center mt-4">📊 Percentage - Puri Playlist 🔥</h1>
-<p class="text-center text-gray-600 mb-4">Gagan Pratap Sir - Sab videos yahi dekho - 18 Classes</p>
+<!-- PERCENTAGE -->
+<h2 class="font-bold text-lg mt-4 mb-2">Percentage Playlist - 18 Videos</h2>
+<div id="nowTitle" class="font-bold text-sm mb-2"></div>
+<iframe id="mainPlayer" width="100%" height="220" frameborder="0" allowfullscreen class="rounded-lg bg-black"></iframe>
+<div id="playlist" class="mt-2"></div>
 
-<div class="bg-black rounded-2xl overflow-hidden">
-<iframe id="mainPlayer" class="w-full h-[220px] md:h-[450px]" src="https://www.youtube.com/embed/5U0tZwMyY2U" allowfullscreen></iframe>
-</div>
-<h2 id="nowTitle" class="font-bold mt-3 text-lg">▶ Class 1 - Percentage Basics (Full Concept)</h2>
+<!-- RATIO -->
+<h2 class="font-bold text-lg mt-6 mb-2">Ratio Playlist</h2>
+<div id="nowTitle2" class="font-bold text-sm mb-2"></div>
+<iframe id="mainPlayer2" width="100%" height="220" frameborder="0" allowfullscreen class="rounded-lg bg-black"></iframe>
+<div id="playlist2" class="mt-2"></div>
 
-<div id="playlist" class="mt-4 space-y-3"></div>
-
-<div class="my-8 border-t-2 border-dashed border-gray-300"></div>
-
-<!-- ===== RATIO SECTION - NEW ===== -->
-<h1 class="text-2xl font-black text-center mt-4">📈 Ratio - Puri Playlist 🔥</h1>
-<p class="text-center text-gray-600 mb-4">Gagan Pratap Sir - 12 Classes - NEW</p>
-
-<div class="bg-black rounded-2xl overflow-hidden">
-<iframe id="mainPlayer2" class="w-full h-[220px] md:h-[450px]" src="https://www.youtube.com/embed/o--7PM1MOr4" allowfullscreen></iframe>
-</div>
-<h2 id="nowTitle2" class="font-bold mt-3 text-lg">▶ Class 1 - Ratio Basics (Full Concept)</h2>
-
-<div id="playlist2" class="mt-4 space-y-3 pb-20"></div>
+<!-- PROFIT AND LOSS -->
+<h2 class="font-bold text-lg mt-6 mb-2">Profit and Loss Playlist - 11 Videos</h2>
+<div id="nowTitle3" class="font-bold text-sm mb-2"></div>
+<iframe id="mainPlayer3" width="100%" height="220" frameborder="0" allowfullscreen class="rounded-lg bg-black"></iframe>
+<div id="playlist3" class="mt-2"></div>
 
 </div>
 
 <script>
-// PERCENTAGE - Tumhare original 18 IDs
-const videos = [
- {id:"5U0tZwMyY2U", title:"Class 1 - Percentage Basics (Full Concept)"},
- {id:"hi8XOobfjlo", title:"Class 2 - Profit Loss me Percentage Use"},
- {id:"6KwqbAsnI_4", title:"Class 3 - One Shot Railway Exams 2026-27"},
- {id:"mwCX35YQiTg", title:"Class 4 - 200 PYQ Practice"},
- {id:"a3BI0dYUMHY", title:"Class 5 - Percentage"},
- {id:"Tst6T-6TtLE", title:"Class 6 - Percentage"},
- {id:"azJatcgDlHo", title:"Class 7 - Percentage"},
- {id:"dW5M9kPLw3Q", title:"Class 8 - Percentage"},
- {id:"ie81CfFWw5Y", title:"Class 9 - Percentage"},
- {id:"ZopfTaNMlqQ", title:"Class 10 - Percentage"},
- {id:"tWQQBU3V-Lc", title:"Class 11 - Percentage"},
- {id:"7Jt9l3l7gHQ", title:"Class 12 - Percentage"},
- {id:"IM1AwPTjoHk", title:"Class 13 - Percentage"},
- {id:"gaf4VahI7Uk", title:"Class 14 - Percentage"},
- {id:"XHhOw8PU_Cw", title:"Class 15 - Percentage"},
- {id:"E9BmIVVxhig", title:"Class 16 - Percentage"},
- {id:"A-uVg3fN_Fs", title:"Class 17 - Percentage"},
- {id:"cDwxYkYM1fw", title:"Class 18 - Percentage Final"}
+// ========== PLAYLIST 1 - PERCENTAGE 18 VIDEOS - TUMHARI ORIGINAL ==========
+const playlist = [
+  { title: "Class 1 - Percentage", id: "5U0tZwMyY2U" },
+  { title: "Class 2 - Profit Loss Percentage", id: "hi8XOobfjlo" },
+  { title: "Class 3 - One Shot", id: "6KwqbAsnI_4" },
+  { title: "Class 4 - 200 PYQ Percentage", id: "mwCX35YQiTg" },
+  { title: "Class 5 - Percentage", id: "a3BI0dYUMHY" },
+  { title: "Class 6 - Percentage", id: "Tst6T-6TtLE" },
+  { title: "Class 7 - Percentage", id: "azJatcgDlHo" },
+  { title: "Class 8 - Percentage", id: "dW5M9kPLw3Q" },
+  { title: "Class 9 - Percentage", id: "ie81CfFWw5Y" },
+  { title: "Class 10 - Percentage", id: "ZopfTaNMlqQ" },
+  { title: "Class 11 - Percentage", id: "tWQQBU3V-Lc" },
+  { title: "Class 12 - Percentage", id: "7Jt9l3l7gHQ" },
+  { title: "Class 13 - Percentage", id: "IM1AwPTjoHk" },
+  { title: "Class 14 - Percentage", id: "gaf4VahI7Uk" },
+  { title: "Class 15 - Percentage", id: "XHhOw8PU_Cw" },
+  { title: "Class 16 - Percentage", id: "E9BmIVVxHig" },
+  { title: "Class 17 - Percentage", id: "A-uVg3fN_Fs" },
+  { title: "Class 18 - Percentage", id: "cDwxYkYM1fw" }
 ];
 
-// RATIO - Tumhare bheje hue 12 links
-const videos2 = [
- {id:"o--7PM1MOr4", title:"Class 1 - Ratio Basics (Full Concept)"},
- {id:"KDJn-XeuFOU", title:"Class 2 - Ratio Advance Questions"},
- {id:"8UDeYvcgU-E", title:"Class 3 - One Shot Ratio for Railway"},
- {id:"WeXBZI5QmZA", title:"Class 4 - Ratio Mixture Concept"},
- {id:"Zxqebc17FDg", title:"Class 5 - Ratio Proportion Tricks"},
- {id:"crMFctX-41c", title:"Class 6 - Ratio Practice Set"},
- {id:"9HqFT4nNJ8E", title:"Class 7 - Ratio for SSC CGL"},
- {id:"bZN8UN6cO3s", title:"Class 8 - Ratio Income Questions"},
- {id:"LuOShE3VwkM", title:"Class 9 - Ratio PYQ Discussion"},
- {id:"DKXSpqgL7dw", title:"Class 10 - Ratio Final Tricks"},
- {id:"AORCp-FCs5Q", title:"Class 11 - Ratio Revision Class"},
- {id:"o5SG0Yd7IGA", title:"Class 12 - Ratio Final Class"}
+// ========== PLAYLIST 2 - RATIO - NAYA + PURANA COMBINED ==========
+const playlist2 = [
+  { title: "Class 1 - Ratio and Proportion", id: "o--7PM1MOr4" },
+  { title: "Class 2 - Ratio for SSC", id: "KDJn-XeuFOU" },
+  { title: "Class 3 - Ratio Income Based", id: "8UDeYvcgU-E" },
+  { title: "Class 4 - Ratio", id: "WeXBZI5QmZA" },
+  { title: "Class 5 - Ratio", id: "Zxqebc17FDg" },
+  { title: "Class 6 - Ratio Tricks", id: "8NewJloPFfQ" },
+  { title: "Class 7 - Ratio Practice", id: "DfUC_ytiRwE" },
+  { title: "Class 8 - Ratio PYQ", id: "hTx2Ir0RApE" },
+  { title: "Class 9 - Ratio Advanced", id: "JO6jpigOdC4" },
+  { title: "Class 10 - Ratio Final", id: "8TaLe_9D_BM" },
+  { title: "Class 11 - Ratio Revision", id: "GxqT8EqcSl4" },
+  { title: "Class 12 - Ratio Doubt", id: "fyLooH_Z2sk" }
 ];
 
-let activePerc = 0;
-let activeRatio = 0;
+// ========== PLAYLIST 3 - PROFIT AND LOSS - 11 VIDEOS ==========
+const playlist3 = [
+  { title: "Class 1 - Profit and Loss Basic", id: "u-WyAfNxvf4" },
+  { title: "Class 2 - Profit and Loss Tricks", id: "8NewJloPFfQ" },
+  { title: "Class 3 - Profit and Loss Practice", id: "DfUC_ytiRwE" },
+  { title: "Class 4 - Profit and Loss PYQ", id: "hTx2Ir0RApE" },
+  { title: "Class 5 - Profit and Loss Advanced", id: "JO6jpigOdC4" },
+  { title: "Class 6 - Profit and Loss for SSC", id: "8TaLe_9D_BM" },
+  { title: "Class 7 - Profit and Loss Short Tricks", id: "GxqT8EqcSl4" },
+  { title: "Class 8 - Profit and Loss Revision", id: "lurFnwLAesk" },
+  { title: "Class 9 - Profit and Loss Final", id: "lfNVexUAzSs" },
+  { title: "Class 10 - Profit and Loss Final Class", id: "fyLooH_Z2sk" },
+  { title: "Class 11 - Profit and Loss Doubt Class", id: "fyLooH_Z2sk" }
+];
 
 function loadPlaylist(activeIndex){
-  activePerc = activeIndex;
-  document.getElementById('playlist').innerHTML = videos.map((v,i)=>`
-    <div onclick="playVideo(${i})" id="item-${i}" class="p-3 bg-white rounded-xl shadow flex justify-between items-center cursor-pointer border-2 ${i===activeIndex?'border-yellow-400':'border-transparent'}">
+  document.getElementById('playlist').innerHTML = playlist.map((v,i)=> `
+    <div onclick="playVideo(${i})" class="flex gap-3 items-center justify-between p-3 bg-white rounded shadow mb-2 ${i==activeIndex?'border-2 border-black':''}">
       <div class="flex gap-3 items-center">
-        <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold ${i===activeIndex?'bg-yellow-400 text-black':'bg-black text-white'}">${i+1}</div>
-        <div>
-          <p class="font-bold text-sm">${v.title}</p>
-          <p class="text-xs text-gray-500">${i===activeIndex?'Gagan Sir • Yahi chalega':'Gagan Sir • Click to Play'}</p>
-        </div>
-      </div>
-      <span>▶</span>
+        <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center text-sm">${i+1}</div>
+        <div><p class="font-bold text-sm">${v.title}</p><p class="text-xs text-gray-500">Gagan Sir • Click to Play</p></div>
+      </div><span>▶</span>
     </div>
   `).join('');
 }
 
 function loadPlaylist2(activeIndex){
-  activeRatio = activeIndex;
-  document.getElementById('playlist2').innerHTML = videos2.map((v,i)=>`
-    <div onclick="playVideo2(${i})" id="item2-${i}" class="p-3 bg-white rounded-xl shadow flex justify-between items-center cursor-pointer border-2 ${i===activeIndex?'border-yellow-400':'border-transparent'}">
+  document.getElementById('playlist2').innerHTML = playlist2.map((v,i)=> `
+    <div onclick="playVideo2(${i})" class="flex gap-3 items-center justify-between p-3 bg-white rounded shadow mb-2 ${i==activeIndex?'border-2 border-black':''}">
       <div class="flex gap-3 items-center">
-        <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold ${i===activeIndex?'bg-yellow-400 text-black':'bg-black text-white'}">${i+1}</div>
-        <div>
-          <p class="font-bold text-sm">${v.title}</p>
-          <p class="text-xs text-gray-500">${i===activeIndex?'Gagan Sir • Yahi chalega':'Gagan Sir • Click to Play'}</p>
-        </div>
-      </div>
-      <span>▶</span>
+        <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center text-sm">${i+1}</div>
+        <div><p class="font-bold text-sm">${v.title}</p><p class="text-xs text-gray-500">Gagan Sir • Click to Play</p></div>
+      </div><span>▶</span>
+    </div>
+  `).join('');
+}
+
+function loadPlaylist3(activeIndex){
+  document.getElementById('playlist3').innerHTML = playlist3.map((v,i)=> `
+    <div onclick="playVideo3(${i})" class="flex gap-3 items-center justify-between p-3 bg-white rounded shadow mb-2 ${i==activeIndex?'border-2 border-black':''}">
+      <div class="flex gap-3 items-center">
+        <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center text-sm">${i+1}</div>
+        <div><p class="font-bold text-sm">${v.title}</p><p class="text-xs text-gray-500">Gagan Sir • Click to Play</p></div>
+      </div><span>▶</span>
     </div>
   `).join('');
 }
 
 function playVideo(i){
-  document.getElementById('mainPlayer').src = "https://www.youtube.com/embed/"+videos[i].id+"?autoplay=1&mute=1";
-  document.getElementById('nowTitle').innerText = "▶ " + videos[i].title;
+  document.getElementById('mainPlayer').src = `https://www.youtube.com/embed/${playlist[i].id}`;
+  document.getElementById('nowTitle').innerText = playlist[i].title;
   loadPlaylist(i);
   document.getElementById('mainPlayer').scrollIntoView({behavior:'smooth'});
 }
-
 function playVideo2(i){
-  document.getElementById('mainPlayer2').src = "https://www.youtube.com/embed/"+videos2[i].id+"?autoplay=1&mute=1";
-  document.getElementById('nowTitle2').innerText = "▶ " + videos2[i].title;
+  document.getElementById('mainPlayer2').src = `https://www.youtube.com/embed/${playlist2[i].id}`;
+  document.getElementById('nowTitle2').innerText = playlist2[i].title;
   loadPlaylist2(i);
   document.getElementById('mainPlayer2').scrollIntoView({behavior:'smooth'});
+}
+function playVideo3(i){
+  document.getElementById('mainPlayer3').src = `https://www.youtube.com/embed/${playlist3[i].id}`;
+  document.getElementById('nowTitle3').innerText = playlist3[i].title;
+  loadPlaylist3(i);
+  document.getElementById('mainPlayer3').scrollIntoView({behavior:'smooth'});
 }
 
 loadPlaylist(0);
 loadPlaylist2(0);
+loadPlaylist3(0);
 </script>
 </body>
 </html>
