@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Percentage - 18 Classes - SSC Study Station</title>
+<title>SSC Study Station - Percentage + Ratio</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50">
 <div class="max-w-4xl mx-auto p-3">
+
+<!-- ===== PERCENTAGE SECTION ===== -->
 <h1 class="text-2xl font-black text-center mt-4">📊 Percentage - Puri Playlist 🔥</h1>
 <p class="text-center text-gray-600 mb-4">Gagan Pratap Sir - Sab videos yahi dekho - 18 Classes</p>
 
@@ -16,10 +18,25 @@
 </div>
 <h2 id="nowTitle" class="font-bold mt-3 text-lg">▶ Class 1 - Percentage Basics (Full Concept)</h2>
 
-<div id="playlist" class="mt-4 space-y-3 pb-10"></div>
+<div id="playlist" class="mt-4 space-y-3"></div>
+
+<div class="my-8 border-t-2 border-dashed border-gray-300"></div>
+
+<!-- ===== RATIO SECTION - NEW ===== -->
+<h1 class="text-2xl font-black text-center mt-4">📈 Ratio - Puri Playlist 🔥</h1>
+<p class="text-center text-gray-600 mb-4">Gagan Pratap Sir - 12 Classes - NEW</p>
+
+<div class="bg-black rounded-2xl overflow-hidden">
+<iframe id="mainPlayer2" class="w-full h-[220px] md:h-[450px]" src="https://www.youtube.com/embed/o--7PM1MOr4" allowfullscreen></iframe>
+</div>
+<h2 id="nowTitle2" class="font-bold mt-3 text-lg">▶ Class 1 - Ratio Basics (Full Concept)</h2>
+
+<div id="playlist2" class="mt-4 space-y-3 pb-20"></div>
+
 </div>
 
 <script>
+// PERCENTAGE - Tumhare original 18 IDs
 const videos = [
  {id:"5U0tZwMyY2U", title:"Class 1 - Percentage Basics (Full Concept)"},
  {id:"hi8XOobfjlo", title:"Class 2 - Profit Loss me Percentage Use"},
@@ -41,14 +58,50 @@ const videos = [
  {id:"cDwxYkYM1fw", title:"Class 18 - Percentage Final"}
 ];
 
-function loadPlaylist(){
+// RATIO - Tumhare bheje hue 12 links
+const videos2 = [
+ {id:"o--7PM1MOr4", title:"Class 1 - Ratio Basics (Full Concept)"},
+ {id:"KDJn-XeuFOU", title:"Class 2 - Ratio Advance Questions"},
+ {id:"8UDeYvcgU-E", title:"Class 3 - One Shot Ratio for Railway"},
+ {id:"WeXBZI5QmZA", title:"Class 4 - Ratio Mixture Concept"},
+ {id:"Zxqebc17FDg", title:"Class 5 - Ratio Proportion Tricks"},
+ {id:"crMFctX-41c", title:"Class 6 - Ratio Practice Set"},
+ {id:"9HqFT4nNJ8E", title:"Class 7 - Ratio for SSC CGL"},
+ {id:"bZN8UN6cO3s", title:"Class 8 - Ratio Income Questions"},
+ {id:"LuOShE3VwkM", title:"Class 9 - Ratio PYQ Discussion"},
+ {id:"DKXSpqgL7dw", title:"Class 10 - Ratio Final Tricks"},
+ {id:"AORCp-FCs5Q", title:"Class 11 - Ratio Revision Class"},
+ {id:"o5SG0Yd7IGA", title:"Class 12 - Ratio Final Class"}
+];
+
+let activePerc = 0;
+let activeRatio = 0;
+
+function loadPlaylist(activeIndex){
+  activePerc = activeIndex;
   document.getElementById('playlist').innerHTML = videos.map((v,i)=>`
-    <div onclick="playVideo(${i})" id="item-${i}" class="p-3 bg-white rounded-xl shadow flex justify-between items-center cursor-pointer border-2 ${i===0?'border-yellow-400':'border-transparent'}">
+    <div onclick="playVideo(${i})" id="item-${i}" class="p-3 bg-white rounded-xl shadow flex justify-between items-center cursor-pointer border-2 ${i===activeIndex?'border-yellow-400':'border-transparent'}">
       <div class="flex gap-3 items-center">
-        <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-white ${i===0?'bg-yellow-400 text-black':'bg-black'}">${i+1}</div>
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold ${i===activeIndex?'bg-yellow-400 text-black':'bg-black text-white'}">${i+1}</div>
         <div>
           <p class="font-bold text-sm">${v.title}</p>
-          <p class="text-xs text-gray-500">${i===0?'Gagan Sir • Yahi chalega':'Gagan Sir • Click to Play'}</p>
+          <p class="text-xs text-gray-500">${i===activeIndex?'Gagan Sir • Yahi chalega':'Gagan Sir • Click to Play'}</p>
+        </div>
+      </div>
+      <span>▶</span>
+    </div>
+  `).join('');
+}
+
+function loadPlaylist2(activeIndex){
+  activeRatio = activeIndex;
+  document.getElementById('playlist2').innerHTML = videos2.map((v,i)=>`
+    <div onclick="playVideo2(${i})" id="item2-${i}" class="p-3 bg-white rounded-xl shadow flex justify-between items-center cursor-pointer border-2 ${i===activeIndex?'border-yellow-400':'border-transparent'}">
+      <div class="flex gap-3 items-center">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold ${i===activeIndex?'bg-yellow-400 text-black':'bg-black text-white'}">${i+1}</div>
+        <div>
+          <p class="font-bold text-sm">${v.title}</p>
+          <p class="text-xs text-gray-500">${i===activeIndex?'Gagan Sir • Yahi chalega':'Gagan Sir • Click to Play'}</p>
         </div>
       </div>
       <span>▶</span>
@@ -57,21 +110,21 @@ function loadPlaylist(){
 }
 
 function playVideo(i){
-  document.getElementById('mainPlayer').src = "https://www.youtube.com/embed/"+videos[i].id+"?autoplay=1";
+  document.getElementById('mainPlayer').src = "https://www.youtube.com/embed/"+videos[i].id+"?autoplay=1&mute=1";
   document.getElementById('nowTitle').innerText = "▶ " + videos[i].title;
-  loadPlaylist();
-  // active border change
-  setTimeout(()=>{
-    document.querySelectorAll('[id^=item-]').forEach(el=>{el.classList.remove('border-yellow-400'); el.firstElementChild.firstElementChild.classList.remove('bg-yellow-400','text-black'); el.firstElementChild.firstElementChild.classList.add('bg-black');});
-    const active = document.getElementById('item-'+i);
-    active.classList.add('border-yellow-400');
-    active.firstElementChild.firstElementChild.classList.remove('bg-black');
-    active.firstElementChild.firstElementChild.classList.add('bg-yellow-400','text-black');
-  },10);
-  window.scrollTo({top:0, behavior:'smooth'});
+  loadPlaylist(i);
+  document.getElementById('mainPlayer').scrollIntoView({behavior:'smooth'});
 }
 
-loadPlaylist();
+function playVideo2(i){
+  document.getElementById('mainPlayer2').src = "https://www.youtube.com/embed/"+videos2[i].id+"?autoplay=1&mute=1";
+  document.getElementById('nowTitle2').innerText = "▶ " + videos2[i].title;
+  loadPlaylist2(i);
+  document.getElementById('mainPlayer2').scrollIntoView({behavior:'smooth'});
+}
+
+loadPlaylist(0);
+loadPlaylist2(0);
 </script>
 </body>
 </html>
