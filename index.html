@@ -139,6 +139,11 @@ loadPlaylist(0);
 loadPlaylist2(0);
 loadPlaylist3(0);
 </script>
+  <script>
+function playVideo(element, videoId) {
+  element.innerHTML = `<iframe width="100%" height="100%" style="aspect-ratio:16/9; border:0;" src="https://www.youtube.com/embed/${videoId}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+}
+</script>
 </body>
 </html> 
 <!-- Playlist 4 - Discount (Gagan Sir) -->
