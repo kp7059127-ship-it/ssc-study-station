@@ -111,7 +111,7 @@ body{background:#FFFCF2;color:#121E3A}
 </div>
 
 <div class="loop-box">
-  <div class="loop-left"><div class="lane-label">— A BETTER STUDY LOOP</div><h2>Know what to do when you sit down.</h2><p>Good preparation is less about heroic weekends and more about showing up with a small, specific plan.</p><a href="#" style="font-size:11px;color:#C0542A;font-weight:700;text-decoration:none;margin-top:10px;display:inline-block">See today's practice →</a></div>
+  <div class="loop-left"><div class="lane-label">-- A BETTER STUDY LOOP</div><h2>Know what to do when you sit down.</h2><p style="font-size:11px;color:#7B8A9B;margin-top:8px">Good preparation is less about heroic weekends.</p><a href="javascript:void(0)" onclick="scrollToMock()" style="font-size:11px;color:#C0542A;font-weight:800;text-decoration:none;margin-top:10px;display:inline-block">See today's practice →</a>
   <div class="loop-steps">
     <div class="step"><div class="step-num">01</div><div><h4>Warm up the recall</h4><p>Five questions to bring yesterday's ideas back.</p></div><time>05 min</time></div>
     <div class="step"><div class="step-num">02</div><div><h4>Learn one useful idea</h4><p>A compact lesson with the why, not just shortcut.</p></div><time>20 min</time></div>
@@ -120,7 +120,7 @@ body{background:#FFFCF2;color:#121E3A}
   </div>
 </div>
 
-<div class="mock-purpose">
+<div class="mock-purpose" id="mockSection">
   <div class="label">PRACTICE WITH PURPOSE</div>
   <div style="display:flex;gap:20px;flex-wrap:wrap"><h2 style="flex:1;min-width:180px">Tests that tell you what to fix next.</h2><div class="sub" style="flex:1;min-width:180px">Not just a score at the end. Get a useful read on your pace, your accuracy, and the topic worth your next hour.</div></div>
   <div class="mock-grid"><div class="featured"><span class="tag">FEATURED MOCK • SSC CGL</span><h3>The balanced paper, set 07.</h3><p>100 questions across four sections, with the right mix of familiar patterns and a few curveballs.</p><a href="mocks.html" class="btn">Start mock test →</a><span style="font-size:9px;margin-left:8px;opacity:0.7">60 min • 200 marks</span><div class="ssc-bg">SSC</div></div><div class="small-cards"><div class="small-card dark"><div>⚡</div><h4>Daily 15</h4><p>A short, sharp set for the days when consistency is the win.</p><a href="#">Take today's set →</a></div><div class="small-card green"><div>↻</div><h4>Retry your misses</h4><p>Turn yesterday's wrong answers into today's easy marks.</p><a href="#" style="color:#fff">Review 18 questions →</a></div></div></div>
@@ -151,6 +151,16 @@ body{background:#FFFCF2;color:#121E3A}
     </div>
   </div>
 </div>
-
+<script>
+function scrollToMock(){
+  const sec = document.getElementById('mockSection');
+  sec.scrollIntoView({behavior:'smooth'});
+  const card = sec.querySelector('.featured');
+  card.style.boxShadow='0 0 0 3px #F5B95E';
+  card.style.transform='scale(1.02)';
+  card.style.transition='0.3s';
+  setTimeout(()=>{card.style.boxShadow=''; card.style.transform='';},1500);
+}
+</script>
 </body>
 </html>
