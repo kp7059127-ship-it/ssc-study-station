@@ -79,7 +79,9 @@ const playlist3 = [
   { title: "Class 11 - Profit and Loss Doubt Class", id: "fyLooH_Z2sk" }
 ];
 
-function loadPlaylist(activeIndex){
+{function  loadPlaylist1(i){
+  document.getElementById('playlist1').innerHTML = playlist1.map...
+}
   document.getElementById('playlist').innerHTML = playlist.map((v,i)=> `
     <div onclick="playVideo(${i})" class="flex gap-3 items-center justify-between p-3 bg-white rounded shadow mb-2 ${i==activeIndex?'border-2 border-black':''}">
       <div class="flex gap-3 items-center">
@@ -90,7 +92,9 @@ function loadPlaylist(activeIndex){
   `).join('');
 }
 
-function loadPlaylist2(activeIndex){
+function loadPlaylist2(i){
+  document.getElementById('playlist2').innerHTML = playlist2.map...
+}{
   document.getElementById('playlist2').innerHTML = playlist2.map((v,i)=> `
     <div onclick="playVideo2(${i})" class="flex gap-3 items-center justify-between p-3 bg-white rounded shadow mb-2 ${i==activeIndex?'border-2 border-black':''}">
       <div class="flex gap-3 items-center">
@@ -101,7 +105,9 @@ function loadPlaylist2(activeIndex){
   `).join('');
 }
 
-function loadPlaylist3(activeIndex){
+function loadPlaylist3(i){
+  document.getElementById('playlist3').innerHTML = playlist3.map...
+}{
   document.getElementById('playlist3').innerHTML = playlist3.map((v,i)=> `
     <div onclick="playVideo3(${i})" class="flex gap-3 items-center justify-between p-3 bg-white rounded shadow mb-2 ${i==activeIndex?'border-2 border-black':''}">
       <div class="flex gap-3 items-center">
