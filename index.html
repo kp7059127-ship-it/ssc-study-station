@@ -6,32 +6,34 @@
 <title>SSC Study Station</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto}
-body{background:#05070A;color:#E2E8F0} /* EXTRA DARK */
-.top{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;background:#05070A;border-bottom:1px solid #151921;position:sticky;top:0;z-index:10}
-.logo{font-weight:900;color:#fff}.logo span{color:#FFC857}
+body{background:#0A0E1A;color:#E2E8F0}
+.top{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;background:#0A0E1A;border-bottom:1px solid #1A2030;position:sticky;top:0;z-index:10}
+.logo{font-weight:900;color:#fff;letter-spacing:-0.3px}.logo span{color:#FFC857}
 
-/* HERO - DARK */
-.hero{margin:12px;background:#10131A;border:1px solid #1C212E;border-radius:22px;padding:18px 18px}
-.badge{font-size:10px;color:#FFC857;background:#1E1A0F;border:1px solid #2A2314;padding:5px 10px;border-radius:999px;display:inline-block;font-weight:700}
-.hero h1{font-size:26px;font-weight:900;color:#fff;line-height:1.1;margin-top:12px}
+/* HERO - PREMIUM VISIBLE */
+.hero{margin:12px;background:linear-gradient(180deg, #151A27 0%, #111624 100%);border:1px solid #232B3E;border-radius:22px;padding:20px}
+.badge{display:inline-block;font-size:11px;color:#FFC857;background:rgba(255,200,87,0.12);border:1px solid rgba(255,200,87,0.22);padding:6px 12px;border-radius:999px;font-weight:700}
+.hero h1{font-size:28px;font-weight:900;color:#fff;margin-top:14px;line-height:1.1}
 .hero h1 em{color:#FFC857;font-style:normal}
-.hero p{color:#6B7280;font-size:12px;line-height:1.5;margin-top:8px}
-.hero-actions{display:flex;gap:8px;margin-top:14px}
-.btn1{background:#FFC857;color:#000;padding:10px 16px;border-radius:10px;font-weight:800;font-size:12px;text-decoration:none}-decoration:none;border:1px solid #232836}
-.btn2{background:#0E121A;border:1px solid #1A1F2C;color:#3D4556;padding:10px 16px;border-radius:10px;font-weight:600;font-size:12px;text-decoration:none}
+.hero p{color:#8B95A8;font-size:13px;margin-top:10px;line-height:1.5}
+.hero-actions{display:flex;gap:10px;margin-top:16px;align-items:center}
+.btn1{background:#FFC857;color:#000;padding:11px 18px;border-radius:12px;font-weight:800;font-size:13px;text-decoration:none;box-shadow:0 4px 20px rgba(255,200,87,0.25)}
+.btn2{background:#1E2435;border:1px solid #2A344B;color:#A0ADC0;padding:11px 18px;border-radius:12px;font-weight:600;font-size:13px;text-decoration:none}
+.streak{margin-top:14px;font-size:12px;color:#CBD5E1;background:#0F1422;padding:8px 12px;border-radius:999px;border:1px solid #1E273A;display:inline-block}
 
-/* TABS */
-.tabs{display:flex;gap:8px;overflow:auto;padding:14px 12px}
-.tab{padding:8px 14px;border-radius:999px;border:1px solid #151A27;background:#0D111A;color:#3D4556;font-weight:600;font-size:11px}
-.tab.active{background:#151B27;color:#7A869F;border-color:#222B3A}
-/* CARDS - EXTRA DARK */
-.cards{padding:0 12px 40px;display:flex;flex-direction:column;gap:10px}
-.card{position:relative;background:#10131A;border:1px solid #1C212E;border-radius:20px;padding:16px;text-decoration:none;color:inherit;display:block}
-.icon{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;font-size:16px;background:#1A1E29;border:1px solid #252A38}
-.card h3{font-size:13px;font-weight:800;color:#fff;margin-top:10px}
-.card p{color:#5A6478;font-size:11px;line-height:1.5;margin-top:5px}
-.card-foot{margin-top:12px;padding-top:10px;border-top:1px solid #181C27;display:flex;justify-content:space-between;font-size:10px;color:#3E4556}
-.card-foot b{color:#FFC857;font-weight:700}
+/* TABS - VISIBLE PREMIUM */
+.tabs{display:flex;gap:9px;overflow:auto;padding:16px 12px}
+.tab{padding:9px 16px;border-radius:999px;border:1px solid #232B3E;background:#151A27;color:#7A869E;font-weight:600;font-size:12px;white-space:nowrap}
+.tab.active{background:#FFFFFF;color:#0A0E1A;border-color:#FFFFFF;font-weight:800}
+
+/* CARDS - VISIBLE PREMIUM */
+.cards{padding:0 12px 40px;display:flex;flex-direction:column;gap:12px}
+.card{background:linear-gradient(180deg, #151A27 0%, #121725 100%);border:1px solid #232B3E;border-radius:20px;padding:18px;text-decoration:none;display:block}
+.icon{width:36px;height:36px;border-radius:11px;background:#1E2435;border:1px solid #2A344B;display:grid;place-items:center;font-size:18px}
+.card h3{font-size:15px;color:#FFFFFF;margin-top:12px;font-weight:800}
+.card p{color:#8B95A8;font-size:12.5px;margin-top:6px;line-height:1.5}
+.card-foot{margin-top:14px;padding-top:12px;border-top:1px solid #1E273A;display:flex;justify-content:space-between;font-size:11px;color:#5A667C}
+.card-foot b{color:#FFC857}
 </style>
 </head>
 <body>
