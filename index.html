@@ -51,18 +51,16 @@ body{background:#FFFCF2;color:#121E3A}
 .step time{font-size:9px;color:#1A6B5A;font-weight:700;margin-left:auto}
 .mock-purpose{background:#131F3C;padding:32px 20px}
 .mock-purpose .label{font-size:9px;letter-spacing:2px;color:#D49A3A;font-weight:800}
-.mock-purpose h2{font-size:24px;font-weight:900;color:#fff;line-height:1.1;margin-top:8px;font-family:Georgia,serif}
-.mock-purpose .sub{font-size:11px;color:#8A9AB5;line-height:1.5;margin-top:8px}
-.mock-grid{margin-top:20px;display:grid;grid-template-columns:1.6fr 0.9fr;gap:10px}
-.featured{background:#E07A5F;border-radius:14px;padding:16px;color:#fff;position:relative;overflow:hidden}
-.featured .tag{font-size:7px;background:rgba(255,255,255,0.2);padding:3px 6px;border-radius:99px;letter-spacing:1px}
-.featured h3{font-size:20px;font-weight:800;line-height:1.1;margin-top:10px;font-family:Georgia,serif}
-.featured p{font-size:10px;color:rgba(255,255,255,0.8);margin-top:8px;line-height:1.4}
-.featured .btn{background:#FFFCF2;color:#121E3A;padding:8px 12px;border-radius:99px;font-size:11px;font-weight:800;display:inline-block;margin-top:18px;text-decoration:none}
-.ssc-bg{position:absolute;right:-10px;bottom:-20px;font-size:90px;font-weight:900;color:rgba(0,0,0,0.15);font-family:Georgia,serif}
-.small-cards{display:flex;flex-direction:column;gap:10px}
-.small-card{border-radius:12px;padding:12px}
-.small-card.dark{background:#1A2744;border:1px solid #243454}
+<div id="quizOverlay" style="display:none;position:fixed;inset:0;background:rgba(18,30,58,0.65);z-index:9999;align-items:flex-end;justify-content:center"><div style="background:#FFFCF2;width:100%;border-radius:24px 24px 0 0;padding:24px 20px;max-width:500px"><div style="display:flex;justify-content:space-between"><div style="font-size:26px;font-weight:900">A quick desk<br>check</div><div onclick="closeQuiz()" style="font-size:22px;cursor:pointer">✕</div></div><div style="height:6px;background:#EFE5D5;border-radius:99px;margin:14px 0"><div id="prog" style="height:100%;background:#E07A5F;width:33%"></div></div><div id="qCount" style="font-size:10px;color:#1A6B5A;font-weight:800">QUESTION 1 OF 3</div><div id="qText" style="font-size:18px;font-weight:800;margin-top:10px"></div><div id="opts" style="margin-top:14px;display:flex;flex-direction:column;gap:10px"></div></div></div>
+<script>
+const questions=[{q:"A train covers 360 km in 5 hours. What is its average speed?",options:["60 km/h","72 km/h","80 km/h","90 km/h"],ans:1},{q:"If 15% of x = 45, what is x?",options:["250","300","350","280"],ans:1},{q:"Synonym of 'Abundant'?",options:["Scarce","Plentiful","Rare","Limited"],ans:1}];
+let cur=0,score=0;
+function openQuiz(){cur=0;score=0;document.getElementById('quizOverlay').style.display='flex';showQ()}
+function closeQuiz(){document.getElementById('quizOverlay').style.display='none'}
+function showQ(){let q=questions[cur];document.getElementById('qCount').innerText=`QUESTION ${cur+1} OF 3`;document.getElementById('qText').innerText=q.q;document.getElementById('prog').style.width=((cur+1)/3*100)+'%';document.getElementById('opts').innerHTML=q.options.map((o,i)=>`<div onclick="checkAns(${i})" style="border:1.5px solid #E6DDD0;padding:12px;border-radius:12px;background:#fff;cursor:pointer;font-weight:600">${o}</div>`).join('')}
+function checkAns(i){if(i===questions[cur].ans)score++;cur++;if(cur<3)showQ();else{document.getElementById('qText').innerText=`You scored ${score}/3 🎉`;document.getElementById('opts').innerHTML=`<a href="maths.html" style="display:block;background:#121E3A;color:#fff;padding:12px;border-radius:12px;text-align:center;text-decoration:none;font-weight:800">Continue to Maths →</a>`}}
+function scrollToMock(){const sec=document.getElementById('mockSection');sec.scrollIntoView({behavior:'smooth'});const card=sec.querySelector('.featured');card.style.boxShadow='0 0 0 3px #F5B95E';setTimeout(()=>{card.style.boxShadow='';},1500)}
+</script>
 .small-card.green{background:#2A6B5E}
 .small-card h4{font-size:11px;font-weight:800;color:#fff}
 .small-card p{font-size:9px;color:rgba(255,255,255,0.7);margin-top:4px;line-height:1.4}
