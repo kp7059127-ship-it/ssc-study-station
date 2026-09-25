@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSC Study Station</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+.video-card{border:1px solid #ddd; border-radius:12px; overflow:hidden; background:#fff; margin-bottom:16px;}
+.video-header{display:flex; align-items:center; gap:12px; padding:12px; background:#f8f8f8;}
+.video-num{background:black; color:white; min-width:44px; height:44px; display:flex; align-items:center; justify-content:center; border-radius:10px; font-weight:bold; font-size:14px;}
+.video-thumb{position:relative; cursor:pointer; background:black; aspect-ratio:16/9;}
+.video-thumb img{width:100%; height:100%; object-fit:cover; display:block;}
+.play-btn{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); background:rgba(0,0,0,0.65); width:64px; height:64px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:28px;}
+.playlist-header{margin:30px 0 14px 0; padding:12px 16px; background:#111; color:white; border-radius:8px; display:flex; justify-content:space-between; align-items:center;}
+</style>
+</head>
+<body class="bg-gray-100">
+<div class="max-w-3xl mx-auto p-3">
+  <!-- ===== NEW HOME PAGE HERO - START ===== -->
+<div style="padding:30px 20px 20px;background:#fef9f0;border-radius:0 0 28px 28px;margin:-12px -12px 20px -12px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+    <div style="font-weight:900;font-size:18px;color:#1a2a4a;"> <span style="color:#111;">SSC Study</span> <span style="color:#e07a5f;">Station</span></div>
+    <div style="border:1px solid #ddd;padding:6px 10px;border-radius:8px;">☰</div>
+  </div>
+  <div style="font-size:10px;letter-spacing:2px;color:#2a9d8f;font-weight:700;margin-bottom:10px;">— YOUR FOCUSED SSC STUDY DESK</div>
+  <h1 style="font-size:38px;font-weight:900;color:#1a2a4a;line-height:1.1;margin:0 0 14px;">Make today's <span style="color:#e07a5f;font-style:italic;display:block;">prep count.</span></h1>
+  <p style="color:#5a6d80;font-size:15px;line-height:1.6;max-width:400px;margin-bottom:20px;">A calmer way to prepare for SSC CGL, CHSL and MTS. Find the right practice, see your progress, and return tomorrow knowing exactly where to begin.</p>
+  <a href="#percentage" style="background:#e07a5f;color:white;padding:12px 18px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;display:inline-block;">Explore subjects →</a>
+  <div style="margin-top:12px;"><a href="#quiz" style="background:white;color:#1a2a4a;border:1px solid #ddd;padding:10px 18px;border-radius:12px;font-weight:700;font-size:13px;text-decoration:none;display:inline-block;">▶ Try a 3-question quiz</a></div>
+  <div style="margin-top:18px;font-size:12px;color:#7a8a9a;">🔥 <b style="color:#2a9d8f;">Day 12</b> of your study streak · small steps, solid scores.</div>
+</div>
+<h1 class="text-2xl font-bold text-center my-4">SSC Study Station - Gagan Sir</h1>
+
+<div class="playlist-header"><h2>📘 PERCENTAGE - Complete (18)</h2></div><div id="p1"></div>
+<div class="playlist-header"><h2>📘 RATIO & PROPORTION - Complete (12)</h2></div><div id="p2"></div>
+<div class="playlist-header"><h2>📘 PROFIT & LOSS - Complete (11)</h2></div><div id="p3"></div>
+<div class="playlist-header"><h2>💸 DISCOUNT - Complete (1)</h2></div><div id="p4"></div>
+<div class="playlist-header"><h2>💰 SIMPLE INTEREST - Complete (9)</h2></div><div id="p5"></div>
+<div class="playlist-header"><h2>💰 COMPOUND INTEREST - Complete</h2></div><div id="p6"></div>
+<div class="playlist-header"><h2>🧪 MIXTURE & ALLIGATION - Complete (14)</h2></div><div id="p7"></div>
+<div class="playlist-header"><h2>⏱️ TIME & WORK - Complete</h2></div><div id="p8"></div>
+<div class="playlist-header"><h2>🚗 TIME SPEED & DISTANCE - Complete (16)</h2></div><div id="p9"></div>
+<div class="playlist-header"><h2>🚂 TRAIN, BOAT & STREAM - Complete</h2></div><div id="p10"></div>
+<div class="playlist-header"><h2>🔢 NUMBER SYSTEM - Complete (22)</h2></div><div id="p11"></div>
+<div class="playlist-header"><h2>📊 HCF & LCM - Complete (16)</h2></div><div id="p12"></div>
+</div>
+  <!-- ARITHMETIC END HEADER -->
+<div style="margin:40px 0 20px 0; padding:16px; background:linear-gradient(135deg, #000000, #434343); color:white; border-radius:12px; text-align:center; border:2px solid gold;">
+  <h2 style="margin:0; font-size:22px; font-weight:800; letter-spacing:1px;">✅ ARITHMETIC COMPLETE ✅</h2>
+  <p style="margin:6px 0 0 0; font-size:14px; color:#FFD700;">Percentage to HCF & LCM - All Done</p>
+  <p style="margin:4px 0 0 0; font-size:12px; color:#ccc;">Next: Advance Maths - Geometry, Algebra, Mensuration</p>
+</div>
+  <!-- ADVANCE MATHS START HEADER -->
+<div style="margin:40px 0 20px 0; padding:20px; background:linear-gradient(135deg, #0f0c29, #302b63, #24243e); color:white; border-radius:12px; text-align:center; border:2px solid #00f2ff; box-shadow:0 4px 15px rgba(0,242,255,0.3);">
+  <h2 style="margin:0; font-size:24px; font-weight:900; letter-spacing:1.5px;">🚀 ADVANCE MATHS START 🚀</h2>
+  <p style="margin:8px 0 0 0; font-size:14px; color:#00f2ff; font-weight:600;"> Algebra |</p>
+  <p style="margin:4px 0 0 0; font-size:11px; color:#aaa;">By Gagan Sir - SSC CGL Special</p>
+</div>
+
+<div class="playlist-header"><h2>📐 ALGEBRA - Complete</h2></div><div id="p13"></div>
+<div class="playlist-header"><h2>🏹 TRIGONOMETRY - Complete</h2></div><div id="p14"></div>
+<div class="playlist-header"><h2>📐 GEOMETRY - Complete (51 Hours)</h2></div><div id="p15"></div>
+<script>
+const data = {
+p1: [["Class 1 - Percentage","5U0tZwMyY2U"],["Class 2","hi8XOobfjlo"],["Class 3 - One Shot","6KwqbAsnI_4"],["Class 4 - 200 PYQ","mwCX35YQiTg"],["Class 5","a3BI0dYUMHY"],["Class 6","Tst6T-6TtLE"],["Class 7","azJatcgDlHo"],["Class 8","dW5M9kPLw3Q"],["Class 9","ie81CfFWw5Y"],["Class 10","ZopfTaNMlqQ"],["Class 11","tWQQBU3V-Lc"],["Class 12","7Jt9l3l7gHQ"],["Class 13","IM1AwPTjoHk"],["Class 14","gaf4VahI7Uk"],["Class 15","XHhOw8PU_Cw"],["Class 17","A-uVg3fN_Fs"],["Class 18","cDwxYkYM1fw"]],
+p2: [["Class 1 - Ratio","o--7PM1MOr4"],["Class 2","KDJn-XeuFOU"],["Class 3","8UDeYvcgU-E"],["Class 4","WeXBZI5QmZA"],["Class 5","Zxqebc17FDg"],["Class 6","8NewJloPFfQ"],["Class 7","DfUC_ytiRwE"],["Class 8","hTx2Ir0RApE"],["Class 9","JO6jpigOdC4"],["Class 10","8TaLe_9D_BM"],["Class 11","GxqT8EqcSl4"],["Class 12","fyLooH_Z2sk"]],
+p3: [["Class 1 - Profit and Loss","u-WyAfNxvf4"],["Class 2","8NewJloPFfQ"],["Class 3","DfUC_ytiRwE"],["Class 4","hTx2Ir0RApE"],["Class 5","JO6jpigOdC4"],["Class 6","8TaLe_9D_BM"],["Class 7","GxqT8EqcSl4"],["Class 8","lurFnwLAesk"],["Class 9","lfNVexUAzSs"],["Class 10","fyLooH_Z2sk"],["Class 11","fyLooH_Z2sk"]],
+p4: [["Class 1 - Discount","O4mbB3tLvtI"]],
+p5: [["Class 1","QGA6qumCubg"],["Class 2","5-nMomeqxQQ"],["Class 3","ECGco8bSoJA"],["Class 4","qeerymdcc_c"],["Class 5","U25jOPBZmTo"],["Class 6","hZQGDoqstLE"],["Class 7","pgK8_sRFQjY"],["Class 8","OgfGwFQwbyg"],["Class 9","YaepCUPPhSo"]],
+p6: [["Class 5 - CI","tv65czTx30Y"],["Class 6","WugGikHAQL0"],["Class 7","b4tu-qcvO1s"],["Class 8","HLU6O3TlARM"],["Class 9","Fq3Gpkep3jg"],["Class 10","cxR3YuK3N_I"],["Class 11","sYGoKHn1roU"]],
+p7: [["Class 1 - Mixture","how8v3kbapc"],["Class 2","LKszF0nX-pw"],["Class 3","rRfFM2J5IeA"],["Class 4","7PCp_lX46Cw"],["Class 5","Dzj5Bs-mn5Q"],["Class 6","CsgM8Qh9lyE"],["Class 7","7Ma0O6dNalw"],["Class 8","sr6t2l6gmK0"],["Class 9","RB84CMXmc9c"],["Class 10","C3yUlueq1IA"],["Class 11","53UdGSJfFB0"],["Class 12","XoMGJcwwROo"],["Class 13","f_DICht0w1E"],["Class 14","FoQ4fnFtZ2I"]],
+p8: [["Class 1 - Time & Work","qE1ciY4E6tI"]],
+p9: [["Class 1 - TSD","FB0G-caPiyE"],["Class 2","rCclCW63i4A"],["Class 3","pXAxLmxwsq0"],["Class 4","HOLv_jOJhTo"],["Class 5","wTUJJ17ljJU"],["Class 6","RJMJq9Jj7HM"],["Class 7","PYiZsO0fEUk"],["Class 8","4S0rK9h-CPo"],["Class 9","K51quPN61A4"],["Class 10","Tor23dihlrE"],["Class 11","RjVZ6Zs9KBM"],["Class 12","ZXzQXYIuXzQ"],["Class 13","HMxYVSK-H5U"],["Class 14","xsAGAkUPmXE"],["Class 15","E-hEXoHRQpw"],["Class 16","l08w0Yc5jCg"]],
+p10: [["Class 1 - Train Boat Stream","1Yd2-DpWmGQ"]],
+p11: [["Class 01 - Number System","jSAxozw6H_Q"],["Class 02","yrpPPKzUcr4"],["Class 03","2njFIQETpks"],["Class 04","FAQJ2XfcgdU"],["Class 05","IC-R8gW7FzQ"],["Class 06","iZMcVJOkqdk"],["Class 07","1oD5ybcpo_E"],["Class 08","4KjLyX8m4m8"],["Class 09","aFYvo99OAxk"],["Class 10","N1Xd_1esZYA"],["Class 11","-S5p_CpOTzA"],["Class 12","bCq3Ss7lOwg"],["Class 13","ZbdDfY4Zag8"],["Class 14","f8USd4cFbi8"],["Class 15","cHCQb75TfO4"],["Class 16","uZS-1AM7m_w"],["Class 17","qiuuQz3HBlE"],["Class 18","4KVGJJex41U"],["Class 19","RMrqIrTMxe8"],["Class 20","5g4ep098aq4"],["Class 21","7_YlPzdk7zA"],["Class 22","880o46UmbzM"]],
+p12: [["Class 01 - HCF & LCM","CtHV9o6h68k"],["Class 01 P2","1fGtYwiKMm4"],["Class 02","c0G9DyxSzhk"],["Class 03","XHX_ebTLk4k"],["Class 04","1ZA31PvHCNY"],["Class 05","C_g0QUySFjo"],["Class 06","92cQz41_C0Y"],["Class 07","J0DjVwMs3BE"],["Class 08","0N3dBl7IdOE"],["Class 09","hsmxL7il21c"],["Class 10","1RmwWckGFZk"],["Class 11","wbpJL6ALD_E"],["Class 12","BxPdKdqKHpo"],["Class 13","CnTY2hQ9UMc"],["Class 14","B6H9Eobuw1w"],["Class 15","oKK992UM4EY"]],
+
+   p13: [
+  ["Class 01 - Algebra","-lpVoclozI4"],
+  ["Class 02 - Algebra","Tfs3JZZRo2U"],
+  ["Class 03 - Algebra","FNn8ks0blQs"],
+  ["Class 04 - Algebra","G5TEz9uPxaQ"],
+  ["Class 05 - Algebra","zlQYtdVk3as"],
+  ["Class 06 - Algebra","40sKXchpt6E"],
+  ["Class 07 - Algebra","IOmfxe7_OgI"],
+  ["Class 08 - Algebra","V2qheCqY6ag"],
+  ["Class 09 - Algebra","mjQnDHHli0I"],
+  ["Class 10 - Algebra","1Mnrho-38LM"],
+  ["Class 11 - Algebra","89fHnBpW8Bw"],
+  ["Class 12 - Algebra","HkL3-iSB5wU"],
+  ["Class 13 - Algebra","E0X7yhVhHis"],
+  ["Class 14 - Algebra","glsNMQYA-hs"],
+  ["Class 15 - Algebra","DUxnwiwX8_g"],
+  ["Class 16 - Algebra","Rmu07EzoNJs"],
+  ["Class 17 - Algebra","Ak94IdYw8Hc"],
+  ["Class 18 - Algebra","yW2QAlNJMd8"],
+  ["Class 19 - Algebra","DyBkG-XvAKs"],
+  ["Class 20 - Algebra","PtCxzfqoxT8"],
+  ["Class 21 - Algebra","DRavo6JYBMc"],
+  ["Class 22 - Algebra","QYgCvM3Wok0"],
+  ["Class 23 - Algebra","zbt3eHppSbU"],
+  ["Class 24 - Algebra","jAaAGT9aLVU"],
+  ["Class 25 - Algebra","okT-Mox3IPY"],
+  ["Class 26 - Algebra","HsWUiRv1QCA"],
+  ["Class 27 - Algebra","Gv9HE1u55hE"],
+  ["Class 28 - Algebra","wuWxgTXm2bw"],
+  ["Class 29 - Algebra","a1i0VTO3hMI"],
+  ["Class 30 - Algebra","9Ys2qMlKRAk"],
+  ["Class 31 - Algebra","O32ePsmVQNc"],
+   ], 
+    
+  p14: [
+    ["Class 01 - Trigonometry", "ZGQT8fAKCo8"],
+    ["Class 02 - Trigonometry", "4-Dtt6ttbNw"],
+    ["Class 03 - Trigonometry", "YddbQ3mTvZ4"],
+    ["Class 04 - Trigonometry", "yXkJ-Q0zGHM"],
+    ["Class 05 - Trigonometry", "ItN9zOCc0Dg"],
+    ["Class 06 - Trigonometry", "2Xtu4n2_5h4"],
+    ["Class 07 - Trigonometry", "4Py9-IBz4OI"],
+    ["Class 08 - Trigonometry", "sbwebO7Hyws"],
+    ["Class 09 - Trigonometry", "A4TlLLuI-tk"],
+    ["Class 10 - Trigonometry", "CgwUdEPYJGA"],
+    ["Class 11 - Trigonometry", "4peZO_z37rg"],
+    ["Class 12 - Trigonometry", "wicZXqd26xg"],
+    ["Class 13 - Trigonometry", "Croe-HH3yKQ"],
+    ["Class 14 - Trigonometry", "yPPDlnu_Vwo"],
+    ["Class 15 - Trigonometry", "Zy_SiYRjcmA"],
+    ["Class 16 - Trigonometry", "uLn8xfO6EbE"],
+    ["Class 17 - Trigonometry", "GuL715SGKbk"],
+    ["Class 18 - Trigonometry", "4REpiB4USL8"],
+    ["Class 19 - Trigonometry", "zark8X-7H94"],
+    ["Class 20 - Trigonometry", "Puw3nxYryOY"],
+    ["Class 21 - Trigonometry", "tFD-ps2wEsc"],
+    ["Class 22 - Trigonometry", "x_RNZ1DnqJc"],
+  ],
+       p15: [
+    ["Complete Geometry - All Chapters in One Shot (51 Hours)", "EBYNCG2Q30A"],
+  ],                                        
+  };
+function render(){
+  for(const pid in data){
+    const container = document.getElementById(pid);
+    container.innerHTML = data[pid].map((v,i)=>`
+      <div class="video-card">
+        <div class="video-header"><div class="video-num">${i+1}</div><div><div style="font-weight:700; font-size:14px;">${v[0]}</div><div style="font-size:12px; color:gray;">Gagan Sir • Click to Play</div></div></div>
+        <div class="video-thumb" onclick="playVideo(this,'${v[1]}')"><img src="https://img.youtube.com/vi/${v[1]}/hqdefault.jpg" loading="lazy"><div class="play-btn">▶</div></div>
+      </div>`).join('');
+  }
+}
+function playVideo(el, id){
+  el.innerHTML = '<iframe style="width:100%; aspect-ratio:16/9; border:0;" src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0" allowfullscreen></iframe>';
+}
+render();
+</script>
+</body>
+</html>
