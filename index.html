@@ -7,32 +7,32 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto}
 body{background:#0A0E1A;color:#E2E8F0}
-.top{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;background:#0A0E1A;border-bottom:1px solid #1A2030;position:sticky;top:0;z-index:10}
+.top{padding:16px 20px;display:flex;justify-content:space-between;align-items:center;background:#0A0E1A;border-bottom:1px solid #151B2A;position:sticky;top:0;z-index:10}
 .logo{font-weight:900;color:#fff;letter-spacing:-0.3px}.logo span{color:#FFC857}
 
-/* HERO - PREMIUM VISIBLE */
-.hero{margin:12px;background:linear-gradient(180deg, #151A27 0%, #111624 100%);border:1px solid #232B3E;border-radius:22px;padding:30px 20px 24px 20px}
-.badge{display:inline-block;font-size:11px;color:#FFC857;background:rgba(255,200,87,0.12);border:1px solid rgba(255,200,87,0.22);padding:6px 12px;border-radius:999px;font-weight:700}
-.hero h1{font-size:28px;font-weight:900;color:#fff;margin-top:20px;line-height:1.35}
-.hero h1 em{color:#FFC857;font-style:normal}
-.hero p{color:#8B95A8;font-size:13px;margin-top:10px;line-height:1.5}
-.hero-actions{display:flex;gap:12px;margin-top:24px;align-items:center}
-.btn1{background:#FFC857;color:#000;padding:11px 18px;border-radius:12px;font-weight:800;font-size:13px;text-decoration:none;box-shadow:0 4px 20px rgba(255,200,87,0.25)}
-.btn2{background:#1E2435;border:1px solid #2A344B;color:#A0ADC0;padding:11px 18px;border-radius:12px;font-weight:600;font-size:13px;text-decoration:none}
-.streak{margin-top:14px;font-size:12px;color:#CBD5E1;background:#0F1422;padding:8px 12px;border-radius:999px;border:1px solid #1E273A;display:inline-block}
+/* HERO - AISA SPACE WALA */
+.hero{background:#0A0E1A;padding:32px 20px 28px 20px;border-bottom:1px solid #151B2A}
+.badge{display:block;font-size:9px;letter-spacing:1.2px;color:#FFC857;font-weight:800;margin-bottom:12px;opacity:0.9}
+.hero h1{font-size:32px;font-weight:900;color:#fff;line-height:1.15;letter-spacing:-0.5px}
+.hero h1 em{color:#FFC857;font-style:italic;font-weight:800;display:block}
+.hero p{color:#8B95A8;font-size:13px;line-height:1.7;margin-top:16px;max-width:320px}
+.hero-actions{display:flex;flex-direction:column;gap:10px;margin-top:22px;align-items:flex-start}
+.btn1{background:linear-gradient(90deg,#FFC857,#FF8A5B);color:#000;padding:12px 18px;border-radius:12px;font-weight:800;font-size:13px;text-decoration:none}
+.btn2{background:#151A27;border:1px solid #232B3E;color:#8B95A8;padding:9px 14px;border-radius:10px;font-weight:600;font-size:12px;text-decoration:none}
+.streak{margin-top:22px;font-size:11px;color:#5A667C;display:block}
 
-/* TABS - VISIBLE PREMIUM */
-.tabs{display:flex;gap:9px;overflow:auto;padding:16px 12px}
-.tab{padding:9px 16px;border-radius:999px;border:1px solid #232B3E;background:#151A27;color:#7A869E;font-weight:600;font-size:12px;white-space:nowrap}
-.tab.active{background:#FFFFFF;color:#0A0E1A;border-color:#FFFFFF;font-weight:800}
+/* TABS */
+.tabs{display:flex;gap:9px;overflow:auto;padding:18px 14px}
+.tab{padding:8px 15px;border-radius:999px;border:1px solid #232B3E;background:#151A27;color:#6B7588;font-size:12px}
+.tab.active{background:#fff;color:#0A0E1A;border-color:#fff;font-weight:800}
 
-/* CARDS - VISIBLE PREMIUM */
+/* CARDS */
 .cards{padding:0 12px 40px;display:flex;flex-direction:column;gap:12px}
-.card{background:linear-gradient(180deg, #151A27 0%, #121725 100%);border:1px solid #232B3E;border-radius:20px;padding:18px;text-decoration:none;display:block}
-.icon{width:36px;height:36px;border-radius:11px;background:#1E2435;border:1px solid #2A344B;display:grid;place-items:center;font-size:18px}
-.card h3{font-size:15px;color:#FFFFFF;margin-top:12px;font-weight:800}
-.card p{color:#8B95A8;font-size:12.5px;margin-top:6px;line-height:1.5}
-.card-foot{margin-top:14px;padding-top:12px;border-top:1px solid #1E273A;display:flex;justify-content:space-between;font-size:11px;color:#5A667C}
+.card{background:#151A27;border:1px solid #232B3E;border-radius:18px;padding:18px;text-decoration:none;display:block}
+.icon{width:36px;height:36px;border-radius:11px;background:#1E2435;border:1px solid #2A344B;display:grid;place-items:center}
+.card h3{font-size:15px;color:#fff;margin-top:12px;font-weight:800}
+.card p{color:#6B7588;font-size:12px;margin-top:6px;line-height:1.5}
+.card-foot{margin-top:14px;display:flex;justify-content:space-between;font-size:11px;color:#3D4556}
 .card-foot b{color:#FFC857}
 </style>
 </head>
@@ -40,14 +40,14 @@ body{background:#0A0E1A;color:#E2E8F0}
 <div class="top"><div class="logo">SSC Study <span>Station</span></div><div>≡</div></div>
 
 <div class="hero">
-<div class="badge">🔥 Day 12 of your study streak</div>
-<h1>Make today's prep <em>count.</em></h1>
-<p>Learn, revise and practice the exact way Gagan sir teaches in class.</p>
+<span class="badge">- YOUR FOCUSED SSC STUDY DESK</span>
+<h1>Make today's <em>prep count.</em></h1>
+<p>A calmer way to prepare for SSC CGL, CHSL and MTS. Find the right practice, see your progress, and return tomorrow knowing exactly where to begin.</p>
 <div class="hero-actions">
-<a href="maths.html" class="btn1">Explore Maths</a>
-<a href="#" class="btn2">Resume last</a>
+<a href="maths.html" class="btn1">Explore subjects →</a>
+<a href="#" class="btn2">▶ Try a 3-question quiz</a>
 </div>
-<div class="streak">🔒 5 more days to unlock weekly summary</div>
+<span class="streak">🔥 Day 12 of your study streak · small steps, solid scores.</span>
 </div>
 
 <div class="tabs">
@@ -59,13 +59,8 @@ body{background:#0A0E1A;color:#E2E8F0}
 </div>
 
 <div class="cards">
-<a href="maths.html" class="card">
-<div class="icon">🎯</div>
-<h3>Maths</h3>
-<p>Build speed with percentages, algebra and the patterns that repeat.</p>
-<div class="card-foot"><span>151 lessons</span><b>Start here →</b></div>
-</a>
-<div class="card"><div class="icon">🧠</div><h3>Reasoning</h3><p>Spot the logic faster. Puzzles, series and non-verbal.</p><div class="card-foot"><span>96 lessons</span><span>High-yield</span></div></div>
+<a href="maths.html" class="card"><div class="icon">🎯</div><h3>Maths</h3><p>Build speed with percentages, algebra and the patterns that repeat.</p><div class="card-foot"><span>151 lessons</span><b>Start here →</b></div></a>
+<div class="card"><div class="icon">🧠</div><h3>Reasoning</h3><p>Spot the logic faster. Puzzles, series and non-verbal practice.</p><div class="card-foot"><span>96 lessons</span><span style="color:#2a9d8f">High-yield practice</span></div></div>
 <div class="card"><div class="icon">📝</div><h3>English</h3><p>Grammar, vocab and comprehension - small daily wins.</p><div class="card-foot"><span>Coming soon</span></div></div>
 </div>
 </body>
