@@ -36,14 +36,19 @@ body{background:#FFFCF2;color:#121E3A;padding-bottom:90px}
 .tabs{display:flex;gap:8px;overflow:auto;padding:22px 20px 20px;background:#FFFCF2}
 .tab{padding:10px 18px;border-radius:999px;border:1.5px solid #E6DDD0;background:#FFFCF2;color:#6B7A90;font-size:13px;font-weight:600;white-space:nowrap;transition:0.2s}
 .tab.active{background:#121E3A;color:#fff;border-color:#121E3A;font-weight:800}
-.cards{padding:20px 14px;display:flex;flex-direction:column;gap:14px;background:#FFFCF2}
-.card{background:#FFFFFF;border:1px solid #EFE5D5;border-radius:18px;padding:16px;text-decoration:none;display:block;box-shadow:0 4px 20px rgba(18,30,58,0.05);transition:0.2s}
-.card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(18,30,58,0.08)}
-.card h3{font-size:14px;color:#121E3A;font-weight:800}
-.card p{color:#8A9AB5;font-size:12px;margin-top:5px}
-.icon{width:34px;height:34px;border-radius:10px;background:#121E3A;display:grid;place-items:center;margin-bottom:10px;font-size:14px;color:#fff}
-.card-foot{margin-top:12px;display:flex;justify-content:space-between;font-size:11px;color:#8A9AB5;align-items:center}
-.card-foot span:last-child{background:#F7F0E5;padding:4px 10px;border-radius:99px;font-weight:700;color:#121E3A}
+.cards{padding:20px 14px;display:flex;flex-direction:column;gap:16px;background:#F5F1E8}
+.card{background:#FFFFFF;border:1px solid #EFE5D5;border-radius:20px;padding:18px;display:flex;align-items:center;gap:14px;box-shadow:0 8px 24px rgba(18,30,58,0.06);text-decoration:none}
+.card h3{font-size:15px;font-weight:800;color:#121E3A}
+.card p{font-size:12px;color:#6B7A90;margin-top:3px;line-height:1.4}
+.icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:18px;flex-shrink:0;background:#121E3A;color:#fff}
+.card-foot{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end}
+.card-foot span:last-child{background:#121E3A;color:#fff;padding:6px 12px;border-radius:99px;font-size:11px;font-weight:700}
+.cards a:nth-child(1) .icon{background:#FFF1C7}
+.cards div:nth-child(2) .icon{background:#E6F1EC}
+.cards div:nth-child(3) .icon{background:#EFE9FB}
+.cards a:nth-child(4) .icon{background:#D6F0FF}
+.cards a:nth-child(5) .icon{background:#FFE0D6}
+.cards a:nth-child(5){border:1.5px solid #D49A3A;background:linear-gradient(180deg,#FFFFFF 0%,#FFFBF0 100%)}
 .loop-box{padding:0 0 20px;background:#FFFCF2}
 .mock-purpose{background:#131F3C;padding:32px 20px}
 .mock-purpose.label{font-size:9px;letter-spacing:2px;color:#D49A3A;font-weight:800}
