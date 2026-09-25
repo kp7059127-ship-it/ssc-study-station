@@ -98,7 +98,7 @@ body{background:#FFFCF2;color:#121E3A}
 </head>
 <body>
 <div class="top"><div class="logo">SSC Study <span>Station</span></div><div style="color:#5A667C">☰</div></div>
-<div class="hero"><span class="badge">— YOUR FOCUSED SSC STUDY DESK</span><h1>Make today's <em>prep count.</em></h1><p>A calmer way to prepare for SSC CGL, CHSL and MTS.</p><div class="hero-actions"><a href="maths.html" class="btn1">Explore subjects →</a><a href="#" class="btn2">▶ Try a 3-question quiz</a></div><span class="streak">🔥 Day 12 of your study streak</span></div>
+<div class="hero"><span class="badge">— YOUR FOCUSED SSC STUDY DESK</span><h1>Make today's <em>prep count.</em></h1><p>A calmer way to prepare for SSC CGL, CHSL and MTS.</p><div class="hero-actions"><a href="maths.html" class="btn1">Explore subjects →</a><a href="javascript:void(0)" onclick="openQuiz()" class="btn2">▶ Try a 3-question quiz</a></a></div><span class="streak">🔥 Day 12 of your study streak</span></div>
 <div class="stats-box"><div class="top-text">Built for the rhythm of Indian competitive exams — focused, familiar, practical.</div><div class="stats-grid"><div class="stat-item"><div class="stat-num">4</div><div class="stat-label">core SSC subjects</div></div><div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">practice lessons</div></div><div class="stat-item full"><div class="stat-num">15 min</div><div class="stat-label">daily quick wins</div></div></div></div>
 <div class="lane-box"><div class="lane-label">CHOOSE YOUR LANE</div><h2><span>Study the subjects.</span><span>Own the paper.</span></h2><p>Stop scrolling through random questions. Start with a clear subject, a useful lesson, and a next step you can finish.</p></div>
 <div class="tabs"><div class="tab active">All</div><div class="tab">Maths</div><div class="tab">Reasoning</div><div class="tab">English</div><div class="tab">GK</div><div class="tab">Mocks</div></div>
@@ -133,7 +133,7 @@ body{background:#FFFCF2;color:#121E3A}
   <div class="clear-card">
     <h2>clear desk.</h2>
     <p>Pick a subject, take one small test, and let the next session feel easier than this one.</p>
-    <a href="#" class="clear-btn">Begin with three questions →</a>
+    <a href="javascript:void(0)" onclick="openQuiz()" class="clear-btn">Begin with three questions →</a>
   </div>
 </div>
 
@@ -151,6 +151,7 @@ body{background:#FFFCF2;color:#121E3A}
     </div>
   </div>
 </div>
+  <div id="quizOverlay" style="display:none;position:fixed;inset:0;background:rgba(18,30,58,0.65);z-index:9999;align-items:flex-end;justify-content:center"><div style="background:#FFFCF2;width:100%;border-radius:24px 24px 0 0;padding:24px"><div style="display:flex;justify-content:space-between"><div style="font-size:26px;font-weight:900">A quick desk<br>check</div><div onclick="closeQuiz()" style="font-size:22px">✕</div></div><div style="height:6px;background:#EFE5D5;margin:14px 0;border-radius:99px"><div id="prog" style="height:100%;background:#E07A5F;width:33%"></div></div><div id="qCount"></div><div id="qText" style="font-size:18px;font-weight:800;margin-top:10px"></div><div id="opts" style="margin-top:14px;display:flex;flex-direction:column;gap:10px"></div></div></div>
 <script>
 function scrollToMock(){
   const sec = document.getElementById('mockSection');
