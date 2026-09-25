@@ -79,50 +79,47 @@ const playlist3 = [
   { title: "Class 11 - Profit and Loss Doubt Class", id: "fyLooH_Z2sk" }
 ];
 
-{function  loadPlaylist1(i){
-  document.getElementById('playlist1').innerHTML = playlist1.map...
-}
-  document.getElementById('playlist').innerHTML = playlist.map((v,i)=> `
-    <div onclick="playVideo(${i})" class="flex gap-3 items-center justify-between p-3 bg-white rounded shadow mb-2 ${i==activeIndex?'border-2 border-black':''}">
+function loadPlaylist1(i){
+  document.getElementById('playlist1').innerHTML = playlist1.map((v,j)=> `
+    <div onclick="playVideo1(${j})" class="flex gap-3 items-center justify-between p-3 bg-white rounded shadow mb-2">
       <div class="flex gap-3 items-center">
-        <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center text-sm">${i+1}</div>
+        <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center text-sm">${j+1}</div>
         <div><p class="font-bold text-sm">${v.title}</p><p class="text-xs text-gray-500">Gagan Sir • Click to Play</p></div>
-      </div><span>▶</span>
+        <div><span>▶</span></div>
+      </div>
     </div>
   `).join('');
 }
 
 function loadPlaylist2(i){
-  document.getElementById('playlist2').innerHTML = playlist2.map...
-}{
-  document.getElementById('playlist2').innerHTML = playlist2.map((v,i)=> `
-    <div onclick="playVideo2(${i})" class="flex gap-3 items-center justify-between p-3 bg-white rounded shadow mb-2 ${i==activeIndex?'border-2 border-black':''}">
+  document.getElementById('playlist2').innerHTML = playlist2.map((v,j)=> `
+    <div onclick="playVideo2(${j})" class="flex gap-3 items-center justify-between p-3 bg-white rounded shadow mb-2">
       <div class="flex gap-3 items-center">
-        <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center text-sm">${i+1}</div>
+        <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center text-sm">${j+1}</div>
         <div><p class="font-bold text-sm">${v.title}</p><p class="text-xs text-gray-500">Gagan Sir • Click to Play</p></div>
-      </div><span>▶</span>
+        <div><span>▶</span></div>
+      </div>
     </div>
   `).join('');
 }
 
 function loadPlaylist3(i){
-  document.getElementById('playlist3').innerHTML = playlist3.map...
-}{
-  document.getElementById('playlist3').innerHTML = playlist3.map((v,i)=> `
-    <div onclick="playVideo3(${i})" class="flex gap-3 items-center justify-between p-3 bg-white rounded shadow mb-2 ${i==activeIndex?'border-2 border-black':''}">
+  document.getElementById('playlist3').innerHTML = playlist3.map((v,j)=> `
+    <div onclick="playVideo3(${j})" class="flex gap-3 items-center justify-between p-3 bg-white rounded shadow mb-2">
       <div class="flex gap-3 items-center">
-        <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center text-sm">${i+1}</div>
+        <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center text-sm">${j+1}</div>
         <div><p class="font-bold text-sm">${v.title}</p><p class="text-xs text-gray-500">Gagan Sir • Click to Play</p></div>
-      </div><span>▶</span>
+        <div><span>▶</span></div>
+      </div>
     </div>
   `).join('');
 }
 
-function playVideo(i){
-  document.getElementById('mainPlayer').src = `https://www.youtube.com/embed/${playlist[i].id}`;
-  document.getElementById('nowTitle').innerText = playlist[i].title;
-  loadPlaylist(i);
-  document.getElementById('mainPlayer').scrollIntoView({behavior:'smooth'});
+function playVideo1(i){
+  document.getElementById('mainPlayer1').src = `https://www.youtube.com/embed/${playlist1[i].id}`;
+  document.getElementById('nowTitle1').innerText = playlist1[i].title;
+  loadPlaylist1(i);
+  document.getElementById('mainPlayer1').scrollIntoView({behavior:'smooth'});
 }
 function playVideo2(i){
   document.getElementById('mainPlayer2').src = `https://www.youtube.com/embed/${playlist2[i].id}`;
@@ -137,17 +134,10 @@ function playVideo3(i){
   document.getElementById('mainPlayer3').scrollIntoView({behavior:'smooth'});
 }
 
-loadPlaylist(0);
+loadPlaylist1(0);
 loadPlaylist2(0);
 loadPlaylist3(0);
-</script>
-  <script>
-function playVideo(element, videoId) {
-  element.innerHTML = `<iframe width="100%" height="100%" style="aspect-ratio:16/9; border:0;" src="https://www.youtube.com/embed/${videoId}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
-}
-</script>
-</body>
-</html> 
+
 <!-- Playlist 4 - Discount (Gagan Sir) -->
 <div class="subject-card">
   <h2>💸 Playlist 4 - Discount (Complete - 1 Class)</h2>
