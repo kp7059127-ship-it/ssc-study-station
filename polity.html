@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian Polity 20 PYQs - SSC Study Station</title>
+<style>
+body{font-family:Arial; background:#f5f7ff; margin:0; padding:0;}
+.header{background:#121E3A; color:white; padding:15px; display:flex; justify-content:space-between; align-items:center;}
+.header a{color:#FFD166; text-decoration:none;}
+.container{max-width:700px; margin:20px auto; background:white; padding:20px; border-radius:16px; box-shadow:0 2px 10px rgba(0,0,0,0.1);}
+.q{padding:12px; border-bottom:1px solid #eee; line-height:1.5;}
+.q b{color:#003366;}
+.btn{background:#003366; color:white; padding:14px 22px; border:none; border-radius:10px; font-size:16px; cursor:pointer; width:100%; margin-top:15px;}
+</style>
+</head>
+<body>
+<div class="header">
+  <div><b>SSC Study Station</b></div>
+  <a href="index.html">← Back to Home</a>
+</div>
+
+<div class="container">
+<h2 style="color:#003366;">🇮🇳 Indian Polity - Top 20 PYQs for SSC</h2>
+<p style="color:#666;">Selected from last 5 year SSC papers</p>
+
+<div class="q"><b>Q1. Constitution Assembly first meeting?</b><br>Ans: 9 Dec 1946 - Sachchidanand Sinha (Temporary President)</div>
+<div class="q"><b>Q2. Constitution banne me kitna time laga?</b><br>Ans: 2 Year 11 Month 18 Days</div>
+<div class="q"><b>Q3. Preamble me kitni baar sanshodhan?</b><br>Ans: 1 baar, 42nd Amendment 1976 me</div>
+<div class="q"><b>Q4. Fundamental Rights kahan hai?</b><br>Ans: Part III, Article 12-35 (USA se liye)</div>
+<div class="q"><b>Q5. DPSP kahan hai?</b><br>Ans: Part IV, Article 36-51 (Ireland se)</div>
+<div class="q"><b>Q6. Fundamental Duties?</b><br>Ans: 42nd Amendment se jode, ab 11 Duties (Article 51A)</div>
+<div class="q"><b>Q7. President ka Article?</b><br>Ans: Article 52 - Executive head</div>
+<div class="q"><b>Q8. Vice President?</b><br>Ans: Article 63</div>
+<div class="q"><b>Q9. Speaker ko kaun hatata hai?</b><br>Ans: Lok Sabha apni majority se - Art 94</div>
+<div class="q"><b>Q10. Rajya Sabha kaisi hai?</b><br>Ans: Permanent House, kabhi bhang nahi hoti</div>
+<div class="q"><b>Q11. Supreme Court kab bana?</b><br>Ans: 28 Jan 1950, Art 124</div>
+<div class="q"><b>Q12. CAG ka Article?</b><br>Ans: Article 148</div>
+<div class="q"><b>Q13. Finance Commission?</b><br>Ans: Article 280</div>
+<div class="q"><b>Q14. Panchayati Raj?</b><br>Ans: 73rd Amendment 1992</div>
+<div class="q"><b>Q15. Municipality?</b><br>Ans: 74th Amendment 1992</div>
+<div class="q"><b>Q16. Election Commission?</b><br>Ans: Article 324</div>
+<div class="q"><b>Q17. National Emergency?</b><br>Ans: Article 352</div>
+<div class="q"><b>Q18. President Rule?</b><br>Ans: Article 356</div>
+<div class="q"><b>Q19. Financial Emergency?</b><br>Ans: Article 360 - Aaj tak nahi laga</div>
+<div class="q"><b>Q20. Art 32 ko Heart & Soul kisne kaha?</b><br>Ans: Dr. B.R. Ambedkar</div>
+
+<button class="btn" onclick="downloadPDF()">📥 Download Full PDF - Free</button>
+<button class="btn" style="background:#f0f8ff; color:#003366; border:1px solid #d0e3ff;" onclick="window.print()">🖨️ Print / Save as PDF</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+function downloadPDF(){
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+  doc.text("Indian Polity - 20 PYQs - SSC Study Station", 10, 15);
+  let y=25;
+  const qs = document.querySelectorAll('.q');
+  qs.forEach(el=>{
+    let txt = el.innerText;
+    if(y>270){doc.addPage(); y=15;}
+    doc.setFontSize(10);
+    let lines = doc.splitTextToSize(txt, 180);
+    doc.text(lines, 10, y);
+    y+= lines.length*6 + 6;
+  });
+  doc.save("Polity-20-PYQs-SSC-Study-Station.pdf");
+}
+</script>
+</body>
+</html>
