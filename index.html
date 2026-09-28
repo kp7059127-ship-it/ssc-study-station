@@ -148,8 +148,36 @@ body{background:#FFFCF2;color:#121E3A;padding-bottom:90px}
 </div>
 </div>
 </div>
-
-<div class="pdf-box"><div class="lane-label">— THE REVISION SHELF</div><h2>Useful PDFs.<br>No clutter.</h2><p style="font-size:11px;color:#7B8A9B;margin-top:10px;line-height:1.5;max-width:300px">Print them, mark them up, keep them beside your notebook.</p><div class="pdf-list"><div class="pdf-item"><div class="pdf-icon">📄</div><div><h4>Arithmetic essentials: the 21-page revision desk</h4><p>Maths • 21 pages • Updated this month</p></div><a href="#">⬇ Save PDF</a></div><div class="pdf-item"><div class="pdf-icon">📄</div><div><h4>Grammar traps SSC asks again and again</h4><p>English • 18 pages • With examples</p></div><a href="#">⬇ Save PDF</a></div><div class="pdf-item"><div class="pdf-icon">📄</div><div><h4>Indian polity: one-page recall sheets</h4><p>GK • 12 pages • Quick revision</p></div><a href="#">⬇ Save PDF</a></div></div></div>
+<div class="pdf-box"><div class="lane-label">- THE REVISION SHELF</div><h2>Useful PDFs.<br>No clutter.</h2>
+<div style="margin-top:12px; background:white; border-radius:12px; overflow:hidden;">
+<div style="padding:14px; border-bottom:1px solid #eee;">📄 Arithmetic essentials: 21-page revision desk <span style="float:right; color:#c25a3a;">Save PDF</span></div>
+<div style="padding:14px; border-bottom:1px solid #eee;">📄 Grammar traps SSC asks again and again <span style="float:right; color:#c25a3a;">Save PDF</span></div>
+<div onclick="openPolity()" style="padding:14px; background:#f0f8ff; cursor:pointer; border:1px solid #d0e3ff;"><b>📄 Indian polity: 20 PYQs (NEW)</b> <span style="float:right; color:#003366; font-weight:bold;">→ Open Now</span></div>
+</div></div>
+<section id="polity" style="padding:20px; background:#f0f8ff; margin:16px; border-radius:12px; border:1px solid #d0e3ff; display:none;">
+<h3 style="color:#003366;">🇮🇳 Indian Polity - Top 20 PYQs <span onclick="closePolity()" style="float:right; background:#ddd; border-radius:12px; padding:4px 10px; cursor:pointer;">✕</span></h3>
+<p>Q1. First meeting of Constituent Assembly - 9 Dec 1946</p>
+<p>Q2. Time taken - 2 Year 11 Month 18 Days</p>
+<p>Q3. Preamble amended - 42nd Amendment 1976</p>
+<p>Q4. Fundamental Rights - Part III, Art 12-35</p>
+<p>Q5. DPSP - Part IV, Art 36-51</p>
+<p>Q6. Fundamental Duties - 11 duties</p>
+<p>Q7. President - Art 52</p>
+<p>Q8. Vice President - Art 63</p>
+<p>Q9. Speaker removed by - Lok Sabha majority</p>
+<p>Q10. Rajya Sabha - Permanent House</p>
+<p>Q11. Supreme Court established - 28 Jan 1950</p>
+<p>Q12. CAG - Art 148</p>
+<p>Q13. Finance Commission - Art 280</p>
+<p>Q14. Panchayati Raj - 73rd Amendment</p>
+<p>Q15. Municipality - 74th Amendment</p>
+<p>Q16. Election Commission - Art 324</p>
+<p>Q17. National Emergency - Art 352</p>
+<p>Q18. President Rule - Art 356</p>
+<p>Q19. Financial Emergency - Art 360</p>
+<p>Q20. Art 32 Heart & Soul - Dr. Ambedkar</p>
+</section>
+<script>function openPolity(){document.getElementById('polity').style.display='block';document.getElementById('polity').scrollIntoView({behavior:'smooth'});}function closePolity(){document.getElementById('polity').style.display='none';}</script>
 
 <div class="quote-section">
   <div class="quote-icon">❝</div>
@@ -225,69 +253,8 @@ function scrollToMock(){
   setTimeout(()=>{card.style.boxShadow=''; card.style.transform='';},1500);
 }
 </script>
-  </script>
+  
 
-<!-- PDF SECTION START -->
-<section id="pdfs" style="padding:20px; margin:20px; background:white; border-radius:16px; border:1px solid #FFE5B5;">
-<h2 style="color:#121E3A;">📚 Free PDFs Library</h2>
-<p style="color:#666;">SSC ke liye topic-wise ready PDFs</p>
 
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:15px;">
-  <div onclick="openPolity()" style="background:#f0f8ff; border:1px solid #d0e3ff; padding:15px; border-radius:12px; cursor:pointer; text-align:center;">
-    <div style="font-size:24px;">🏛️</div>
-    <b>Indian Polity</b><br>
-    <small>20 PYQs • Free</small>
-  </div>
-  <div style="background:#f5f5f5; padding:15px; border-radius:12px; text-align:center; opacity:0.6;">
-    <div style="font-size:24px;">📜</div>
-    <b>History</b><br>
-    <small>Coming Soon</small>
-  </div>
-</div>
-</section>
-
-<section id="polity" style="padding:20px; background:#f0f8ff; margin:0 20px 20px 20px; border-radius:12px; border:1px solid #d0e3ff; display:none;">
-<h2 style="color:#003366; display:flex; justify-content:space-between; align-items:center;">
-  🇮🇳 Indian Polity - Top 20 PYQs
-  <span onclick="closePolity()" style="cursor:pointer; background:#ddd; border-radius:50%; width:28px; height:28px; display:inline-flex; align-items:center; justify-content:center;">✕</span>
-</h2>
-
-<p><b>Q1. Constitution Assembly first meeting?</b><br>Ans: 9 Dec 1946 - Sachchidanand Sinha</p>
-<p><b>Q2. Constitution banne me time?</b><br>Ans: 2 Year 11 Month 18 Days</p>
-<p><b>Q3. Preamble me sanshodhan?</b><br>Ans: 1 baar, 42nd Amendment 1976</p>
-<p><b>Q4. Fundamental Rights?</b><br>Ans: Part III, Article 12-35</p>
-<p><b>Q5. DPSP?</b><br>Ans: Part IV, Article 36-51 (Ireland se)</p>
-<p><b>Q6. Fundamental Duties?</b><br>Ans: 42nd Amendment, ab 11 duties</p>
-<p><b>Q7. President ka Article?</b><br>Ans: Article 52</p>
-<p><b>Q8. Vice President?</b><br>Ans: Article 63</p>
-<p><b>Q9. Speaker ko kaun hatata hai?</b><br>Ans: Lok Sabha majority - Art 94</p>
-<p><b>Q10. Rajya Sabha?</b><br>Ans: Permanent House</p>
-<p><b>Q11. Supreme Court?</b><br>Ans: 28 Jan 1950, Art 124</p>
-<p><b>Q12. CAG?</b><br>Ans: Article 148</p>
-<p><b>Q13. Finance Commission?</b><br>Ans: Article 280</p>
-<p><b>Q14. Panchayati Raj?</b><br>Ans: 73rd Amendment 1992</p>
-<p><b>Q15. Municipality?</b><br>Ans: 74th Amendment 1992</p>
-<p><b>Q16. Election Commission?</b><br>Ans: Article 324</p>
-<p><b>Q17. National Emergency?</b><br>Ans: Article 352</p>
-<p><b>Q18. President Rule?</b><br>Ans: Article 356</p>
-<p><b>Q19. Financial Emergency?</b><br>Ans: Article 360</p>
-<p><b>Q20. Art 32 ko Heart & Soul kisne kaha?</b><br>Ans: Dr. B.R. Ambedkar</p>
-
-<br>
-<a href="#" onclick="alert('PDF Download jald hi add hoga!')" style="background:#003366; color:white; padding:12px 20px; text-decoration:none; border-radius:8px; display:inline-block;">Download Full PDF - Free</a>
-</section>
-
-<script>
-function openPolity(){
-  document.getElementById('polity').style.display='block';
-  document.getElementById('polity').scrollIntoView({behavior:'smooth'});
-}
-function closePolity(){
-  document.getElementById('polity').style.display='none';
-  document.getElementById('pdfs').scrollIntoView({behavior:'smooth'});
-}
-</script>
-</body>
-</html>
 </body>
 </html>
