@@ -21,14 +21,12 @@
 
 <div style="margin:10px 0 25px 0; padding:20px; background:linear-gradient(135deg, #0f4c0f, #2e8b57, #000000); color:white; border-radius:12px; text-align:center; border:2px solid #00ff88;">
   <h2 style="margin:0; font-size:24px; font-weight:900;">🧠 REASONING START 🧠</h2>
-  <p style="margin:8px 0 0 0; font-size:14px; color:#00ff88;">Puzzles, series and non-verbal practice</p>
+  <p style="margin:8px 0 0 0; font-size:14px; color:#00ff88;">Verbal | Non-Verbal | Critical Reasoning</p>
 </div>
 
-<div class="playlist-header"><h2>🧩 ANALOGY</h2></div><div id="p1"></div>
-<div class="playlist-header"><h2>🔤 CLASSIFICATION</h2></div><div id="p2"></div>
-<div class="playlist-header"><h2>🔢 SERIES</h2></div><div id="p3"></div>
-<div class="playlist-header"><h2>🔡 CODING-DECODING</h2></div><div id="p4"></div>
-<div class="playlist-header"><h2>🩸 BLOOD RELATION</h2></div><div id="p5"></div>
+<div class="playlist-header"><h2>🧠 P1 - CRITICAL REASONING</h2></div><div id="p1"></div>
+<div class="playlist-header"><h2>🧩 P2 - ANALOGY</h2></div><div id="p2"></div>
+<div class="playlist-header"><h2>🔤 P3 - CLASSIFICATION</h2></div><div id="p3"></div>
 
 <div style="margin:40px 0 20px 0; padding:16px; background:linear-gradient(135deg, #000000, #434343); color:white; border-radius:12px; text-align:center; border:2px solid gold;">
   <h2 style="margin:0; font-size:22px; font-weight:800;">✅ REASONING COMPLETE ✅</h2>
@@ -37,12 +35,13 @@
 
 <script>
 const data = {
-p1: [["Analogy Class 1","VIDEO_ID_YAHAN"]],
-p2: [["Classification Class 1","VIDEO_ID_YAHAN"]],
-p3: [],
-p4: [],
-p5: []
+p1: [
+["Critical Reasoning - Full Class", "K83uBTBwb0c"]
+],
+p2: [],
+p3: []
 };
+
 function render(){
   for(const pid in data){
     const c=document.getElementById(pid);
@@ -50,7 +49,7 @@ function render(){
     c.innerHTML=data[pid].map((v,i)=>`
       <div class="video-card">
         <div class="video-header"><div class="video-num">${i+1}</div><div style="font-weight:700;">${v[0]}</div></div>
-        <div class="video-thumb" onclick="this.innerHTML='<iframe style=width:100%;aspect-ratio:16/9;border:0; src=https://www.youtube.com/embed/'+v[1]+'?autoplay=1 allowfullscreen></iframe>'"><img src="https://img.youtube.com/vi/${v[1]}/hqdefault.jpg"><div class="play-btn">▶</div></div>
+        <div class="video-thumb" onclick="this.innerHTML='<iframe style=width:100%;aspect-ratio:16/9;border:0; src=https://www.youtube.com/embed/'+v[1]+'?autoplay=1&rel=0 allowfullscreen></iframe>'"><img src="https://img.youtube.com/vi/${v[1]}/hqdefault.jpg"><div class="play-btn">▶</div></div>
       </div>`).join('');
   }
 }
